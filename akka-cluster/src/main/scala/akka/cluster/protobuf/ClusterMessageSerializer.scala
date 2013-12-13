@@ -11,12 +11,12 @@ import akka.actor.{ ExtendedActorSystem, Address }
 import scala.Some
 import scala.collection.immutable
 import java.io.{ ByteArrayInputStream, ObjectOutputStream, ByteArrayOutputStream }
-import com.google.protobuf.ByteString
+import com.google.protobuf_spark.ByteString
 import akka.util.ClassLoaderObjectInputStream
 import java.{ lang ⇒ jl }
 import java.util.zip.GZIPOutputStream
 import java.util.zip.GZIPInputStream
-import com.google.protobuf.MessageLite
+import com.google.protobuf_spark.MessageLite
 import scala.annotation.tailrec
 
 /**

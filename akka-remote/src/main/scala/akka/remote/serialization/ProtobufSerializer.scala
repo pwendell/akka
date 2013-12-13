@@ -7,7 +7,7 @@ package akka.remote.serialization
 import akka.actor.{ ExtendedActorSystem, ActorRef }
 import akka.remote.WireFormats.ActorRefData
 import akka.serialization.{ Serializer, Serialization }
-import com.google.protobuf.Message
+import com.google.protobuf_spark.Message
 
 object ProtobufSerializer {
 
@@ -29,7 +29,7 @@ object ProtobufSerializer {
 }
 
 /**
- * This Serializer serializes `com.google.protobuf.Message`s
+ * This Serializer serializes `com.google.protobuf_spark.Message`s
  */
 class ProtobufSerializer extends Serializer {
   val ARRAY_OF_BYTE_ARRAY = Array[Class[_]](classOf[Array[Byte]])

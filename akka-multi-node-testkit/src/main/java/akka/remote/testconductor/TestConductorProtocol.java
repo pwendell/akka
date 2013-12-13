@@ -6,10 +6,10 @@ package akka.remote.testconductor;
 public final class TestConductorProtocol {
   private TestConductorProtocol() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      com.google.protobuf_spark.ExtensionRegistry registry) {
   }
   public enum BarrierOp
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf_spark.ProtocolMessageEnum {
     Enter(0, 1),
     Fail(1, 2),
     Succeeded(2, 3),
@@ -34,27 +34,27 @@ public final class TestConductorProtocol {
       }
     }
     
-    public static com.google.protobuf.Internal.EnumLiteMap<BarrierOp>
+    public static com.google.protobuf_spark.Internal.EnumLiteMap<BarrierOp>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<BarrierOp>
+    private static com.google.protobuf_spark.Internal.EnumLiteMap<BarrierOp>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<BarrierOp>() {
+          new com.google.protobuf_spark.Internal.EnumLiteMap<BarrierOp>() {
             public BarrierOp findValueByNumber(int number) {
               return BarrierOp.valueOf(number);
             }
           };
     
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final com.google.protobuf_spark.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final com.google.protobuf_spark.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final com.google.protobuf_spark.Descriptors.EnumDescriptor
         getDescriptor() {
       return akka.remote.testconductor.TestConductorProtocol.getDescriptor().getEnumTypes().get(0);
     }
@@ -64,7 +64,7 @@ public final class TestConductorProtocol {
     };
     
     public static BarrierOp valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        com.google.protobuf_spark.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -84,7 +84,7 @@ public final class TestConductorProtocol {
   }
   
   public enum FailType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf_spark.ProtocolMessageEnum {
     Throttle(0, 1),
     Disconnect(1, 2),
     Abort(2, 3),
@@ -112,27 +112,27 @@ public final class TestConductorProtocol {
       }
     }
     
-    public static com.google.protobuf.Internal.EnumLiteMap<FailType>
+    public static com.google.protobuf_spark.Internal.EnumLiteMap<FailType>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<FailType>
+    private static com.google.protobuf_spark.Internal.EnumLiteMap<FailType>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<FailType>() {
+          new com.google.protobuf_spark.Internal.EnumLiteMap<FailType>() {
             public FailType findValueByNumber(int number) {
               return FailType.valueOf(number);
             }
           };
     
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final com.google.protobuf_spark.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final com.google.protobuf_spark.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final com.google.protobuf_spark.Descriptors.EnumDescriptor
         getDescriptor() {
       return akka.remote.testconductor.TestConductorProtocol.getDescriptor().getEnumTypes().get(1);
     }
@@ -142,7 +142,7 @@ public final class TestConductorProtocol {
     };
     
     public static FailType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        com.google.protobuf_spark.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -162,7 +162,7 @@ public final class TestConductorProtocol {
   }
   
   public enum Direction
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf_spark.ProtocolMessageEnum {
     Send(0, 1),
     Receive(1, 2),
     Both(2, 3),
@@ -184,27 +184,27 @@ public final class TestConductorProtocol {
       }
     }
     
-    public static com.google.protobuf.Internal.EnumLiteMap<Direction>
+    public static com.google.protobuf_spark.Internal.EnumLiteMap<Direction>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<Direction>
+    private static com.google.protobuf_spark.Internal.EnumLiteMap<Direction>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<Direction>() {
+          new com.google.protobuf_spark.Internal.EnumLiteMap<Direction>() {
             public Direction findValueByNumber(int number) {
               return Direction.valueOf(number);
             }
           };
     
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final com.google.protobuf_spark.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final com.google.protobuf_spark.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final com.google.protobuf_spark.Descriptors.EnumDescriptor
         getDescriptor() {
       return akka.remote.testconductor.TestConductorProtocol.getDescriptor().getEnumTypes().get(2);
     }
@@ -214,7 +214,7 @@ public final class TestConductorProtocol {
     };
     
     public static Direction valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        com.google.protobuf_spark.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -234,7 +234,7 @@ public final class TestConductorProtocol {
   }
   
   public interface WrapperOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // optional .Hello hello = 1;
     boolean hasHello();
@@ -261,7 +261,7 @@ public final class TestConductorProtocol {
     akka.remote.testconductor.TestConductorProtocol.AddressRequestOrBuilder getAddrOrBuilder();
   }
   public static final class Wrapper extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements WrapperOrBuilder {
     // Use Wrapper.newBuilder() to construct.
     private Wrapper(Builder builder) {
@@ -278,12 +278,12 @@ public final class TestConductorProtocol {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_Wrapper_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_Wrapper_fieldAccessorTable;
     }
@@ -339,24 +339,24 @@ public final class TestConductorProtocol {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           done_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDoneBytes() {
+    private com.google.protobuf_spark.ByteString getDoneBytes() {
       java.lang.Object ref = done_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         done_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -413,7 +413,7 @@ public final class TestConductorProtocol {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -441,23 +441,23 @@ public final class TestConductorProtocol {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(1, hello_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(2, barrier_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(3, failure_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(4, getDoneBytes());
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(5, addr_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -473,25 +473,25 @@ public final class TestConductorProtocol {
     }
     
     public static akka.remote.testconductor.TestConductorProtocol.Wrapper parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Wrapper parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Wrapper parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Wrapper parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -501,7 +501,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.Wrapper parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -517,7 +517,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.Wrapper parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -527,13 +527,13 @@ public final class TestConductorProtocol {
       }
     }
     public static akka.remote.testconductor.TestConductorProtocol.Wrapper parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Wrapper parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -548,19 +548,19 @@ public final class TestConductorProtocol {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.testconductor.TestConductorProtocol.WrapperOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_Wrapper_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_Wrapper_fieldAccessorTable;
       }
@@ -570,12 +570,12 @@ public final class TestConductorProtocol {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getHelloFieldBuilder();
           getBarrierFieldBuilder();
           getFailureFieldBuilder();
@@ -621,7 +621,7 @@ public final class TestConductorProtocol {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.testconductor.TestConductorProtocol.Wrapper.getDescriptor();
       }
@@ -639,7 +639,7 @@ public final class TestConductorProtocol {
       }
       
       private akka.remote.testconductor.TestConductorProtocol.Wrapper buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.testconductor.TestConductorProtocol.Wrapper result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -693,7 +693,7 @@ public final class TestConductorProtocol {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.testconductor.TestConductorProtocol.Wrapper) {
           return mergeFrom((akka.remote.testconductor.TestConductorProtocol.Wrapper)other);
         } else {
@@ -752,11 +752,11 @@ public final class TestConductorProtocol {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -823,7 +823,7 @@ public final class TestConductorProtocol {
       
       // optional .Hello hello = 1;
       private akka.remote.testconductor.TestConductorProtocol.Hello hello_ = akka.remote.testconductor.TestConductorProtocol.Hello.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.Hello, akka.remote.testconductor.TestConductorProtocol.Hello.Builder, akka.remote.testconductor.TestConductorProtocol.HelloOrBuilder> helloBuilder_;
       public boolean hasHello() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
@@ -897,11 +897,11 @@ public final class TestConductorProtocol {
           return hello_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.Hello, akka.remote.testconductor.TestConductorProtocol.Hello.Builder, akka.remote.testconductor.TestConductorProtocol.HelloOrBuilder> 
           getHelloFieldBuilder() {
         if (helloBuilder_ == null) {
-          helloBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          helloBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.testconductor.TestConductorProtocol.Hello, akka.remote.testconductor.TestConductorProtocol.Hello.Builder, akka.remote.testconductor.TestConductorProtocol.HelloOrBuilder>(
                   hello_,
                   getParentForChildren(),
@@ -913,7 +913,7 @@ public final class TestConductorProtocol {
       
       // optional .EnterBarrier barrier = 2;
       private akka.remote.testconductor.TestConductorProtocol.EnterBarrier barrier_ = akka.remote.testconductor.TestConductorProtocol.EnterBarrier.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.EnterBarrier, akka.remote.testconductor.TestConductorProtocol.EnterBarrier.Builder, akka.remote.testconductor.TestConductorProtocol.EnterBarrierOrBuilder> barrierBuilder_;
       public boolean hasBarrier() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
@@ -987,11 +987,11 @@ public final class TestConductorProtocol {
           return barrier_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.EnterBarrier, akka.remote.testconductor.TestConductorProtocol.EnterBarrier.Builder, akka.remote.testconductor.TestConductorProtocol.EnterBarrierOrBuilder> 
           getBarrierFieldBuilder() {
         if (barrierBuilder_ == null) {
-          barrierBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          barrierBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.testconductor.TestConductorProtocol.EnterBarrier, akka.remote.testconductor.TestConductorProtocol.EnterBarrier.Builder, akka.remote.testconductor.TestConductorProtocol.EnterBarrierOrBuilder>(
                   barrier_,
                   getParentForChildren(),
@@ -1003,7 +1003,7 @@ public final class TestConductorProtocol {
       
       // optional .InjectFailure failure = 3;
       private akka.remote.testconductor.TestConductorProtocol.InjectFailure failure_ = akka.remote.testconductor.TestConductorProtocol.InjectFailure.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.InjectFailure, akka.remote.testconductor.TestConductorProtocol.InjectFailure.Builder, akka.remote.testconductor.TestConductorProtocol.InjectFailureOrBuilder> failureBuilder_;
       public boolean hasFailure() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
@@ -1077,11 +1077,11 @@ public final class TestConductorProtocol {
           return failure_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.InjectFailure, akka.remote.testconductor.TestConductorProtocol.InjectFailure.Builder, akka.remote.testconductor.TestConductorProtocol.InjectFailureOrBuilder> 
           getFailureFieldBuilder() {
         if (failureBuilder_ == null) {
-          failureBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          failureBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.testconductor.TestConductorProtocol.InjectFailure, akka.remote.testconductor.TestConductorProtocol.InjectFailure.Builder, akka.remote.testconductor.TestConductorProtocol.InjectFailureOrBuilder>(
                   failure_,
                   getParentForChildren(),
@@ -1099,7 +1099,7 @@ public final class TestConductorProtocol {
       public String getDone() {
         java.lang.Object ref = done_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           done_ = s;
           return s;
         } else {
@@ -1121,7 +1121,7 @@ public final class TestConductorProtocol {
         onChanged();
         return this;
       }
-      void setDone(com.google.protobuf.ByteString value) {
+      void setDone(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000008;
         done_ = value;
         onChanged();
@@ -1129,7 +1129,7 @@ public final class TestConductorProtocol {
       
       // optional .AddressRequest addr = 5;
       private akka.remote.testconductor.TestConductorProtocol.AddressRequest addr_ = akka.remote.testconductor.TestConductorProtocol.AddressRequest.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.AddressRequest, akka.remote.testconductor.TestConductorProtocol.AddressRequest.Builder, akka.remote.testconductor.TestConductorProtocol.AddressRequestOrBuilder> addrBuilder_;
       public boolean hasAddr() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
@@ -1203,11 +1203,11 @@ public final class TestConductorProtocol {
           return addr_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.AddressRequest, akka.remote.testconductor.TestConductorProtocol.AddressRequest.Builder, akka.remote.testconductor.TestConductorProtocol.AddressRequestOrBuilder> 
           getAddrFieldBuilder() {
         if (addrBuilder_ == null) {
-          addrBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          addrBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.testconductor.TestConductorProtocol.AddressRequest, akka.remote.testconductor.TestConductorProtocol.AddressRequest.Builder, akka.remote.testconductor.TestConductorProtocol.AddressRequestOrBuilder>(
                   addr_,
                   getParentForChildren(),
@@ -1229,7 +1229,7 @@ public final class TestConductorProtocol {
   }
   
   public interface HelloOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required string name = 1;
     boolean hasName();
@@ -1241,7 +1241,7 @@ public final class TestConductorProtocol {
     akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder getAddressOrBuilder();
   }
   public static final class Hello extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements HelloOrBuilder {
     // Use Hello.newBuilder() to construct.
     private Hello(Builder builder) {
@@ -1258,12 +1258,12 @@ public final class TestConductorProtocol {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_Hello_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_Hello_fieldAccessorTable;
     }
@@ -1280,24 +1280,24 @@ public final class TestConductorProtocol {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           name_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getNameBytes() {
+    private com.google.protobuf_spark.ByteString getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         name_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -1339,7 +1339,7 @@ public final class TestConductorProtocol {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1358,11 +1358,11 @@ public final class TestConductorProtocol {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(1, getNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(2, address_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -1378,25 +1378,25 @@ public final class TestConductorProtocol {
     }
     
     public static akka.remote.testconductor.TestConductorProtocol.Hello parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Hello parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Hello parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Hello parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -1406,7 +1406,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.Hello parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -1422,7 +1422,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.Hello parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -1432,13 +1432,13 @@ public final class TestConductorProtocol {
       }
     }
     public static akka.remote.testconductor.TestConductorProtocol.Hello parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Hello parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -1453,19 +1453,19 @@ public final class TestConductorProtocol {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.testconductor.TestConductorProtocol.HelloOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_Hello_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_Hello_fieldAccessorTable;
       }
@@ -1475,12 +1475,12 @@ public final class TestConductorProtocol {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getAddressFieldBuilder();
         }
       }
@@ -1505,7 +1505,7 @@ public final class TestConductorProtocol {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.testconductor.TestConductorProtocol.Hello.getDescriptor();
       }
@@ -1523,7 +1523,7 @@ public final class TestConductorProtocol {
       }
       
       private akka.remote.testconductor.TestConductorProtocol.Hello buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.testconductor.TestConductorProtocol.Hello result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -1553,7 +1553,7 @@ public final class TestConductorProtocol {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.testconductor.TestConductorProtocol.Hello) {
           return mergeFrom((akka.remote.testconductor.TestConductorProtocol.Hello)other);
         } else {
@@ -1591,11 +1591,11 @@ public final class TestConductorProtocol {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -1641,7 +1641,7 @@ public final class TestConductorProtocol {
       public String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           name_ = s;
           return s;
         } else {
@@ -1663,7 +1663,7 @@ public final class TestConductorProtocol {
         onChanged();
         return this;
       }
-      void setName(com.google.protobuf.ByteString value) {
+      void setName(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000001;
         name_ = value;
         onChanged();
@@ -1671,7 +1671,7 @@ public final class TestConductorProtocol {
       
       // required .Address address = 2;
       private akka.remote.testconductor.TestConductorProtocol.Address address_ = akka.remote.testconductor.TestConductorProtocol.Address.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.Address, akka.remote.testconductor.TestConductorProtocol.Address.Builder, akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder> addressBuilder_;
       public boolean hasAddress() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
@@ -1745,11 +1745,11 @@ public final class TestConductorProtocol {
           return address_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.Address, akka.remote.testconductor.TestConductorProtocol.Address.Builder, akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder> 
           getAddressFieldBuilder() {
         if (addressBuilder_ == null) {
-          addressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          addressBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.testconductor.TestConductorProtocol.Address, akka.remote.testconductor.TestConductorProtocol.Address.Builder, akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder>(
                   address_,
                   getParentForChildren(),
@@ -1771,7 +1771,7 @@ public final class TestConductorProtocol {
   }
   
   public interface EnterBarrierOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required string name = 1;
     boolean hasName();
@@ -1786,7 +1786,7 @@ public final class TestConductorProtocol {
     long getTimeout();
   }
   public static final class EnterBarrier extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements EnterBarrierOrBuilder {
     // Use EnterBarrier.newBuilder() to construct.
     private EnterBarrier(Builder builder) {
@@ -1803,12 +1803,12 @@ public final class TestConductorProtocol {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_EnterBarrier_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_EnterBarrier_fieldAccessorTable;
     }
@@ -1825,24 +1825,24 @@ public final class TestConductorProtocol {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           name_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getNameBytes() {
+    private com.google.protobuf_spark.ByteString getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         name_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -1888,7 +1888,7 @@ public final class TestConductorProtocol {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1910,15 +1910,15 @@ public final class TestConductorProtocol {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(1, getNameBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeEnumSize(2, op_.getNumber());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeInt64Size(3, timeout_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -1934,25 +1934,25 @@ public final class TestConductorProtocol {
     }
     
     public static akka.remote.testconductor.TestConductorProtocol.EnterBarrier parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.EnterBarrier parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.EnterBarrier parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.EnterBarrier parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -1962,7 +1962,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.EnterBarrier parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -1978,7 +1978,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.EnterBarrier parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -1988,13 +1988,13 @@ public final class TestConductorProtocol {
       }
     }
     public static akka.remote.testconductor.TestConductorProtocol.EnterBarrier parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.EnterBarrier parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -2009,19 +2009,19 @@ public final class TestConductorProtocol {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.testconductor.TestConductorProtocol.EnterBarrierOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_EnterBarrier_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_EnterBarrier_fieldAccessorTable;
       }
@@ -2031,12 +2031,12 @@ public final class TestConductorProtocol {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -2058,7 +2058,7 @@ public final class TestConductorProtocol {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.testconductor.TestConductorProtocol.EnterBarrier.getDescriptor();
       }
@@ -2076,7 +2076,7 @@ public final class TestConductorProtocol {
       }
       
       private akka.remote.testconductor.TestConductorProtocol.EnterBarrier buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.testconductor.TestConductorProtocol.EnterBarrier result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -2106,7 +2106,7 @@ public final class TestConductorProtocol {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.testconductor.TestConductorProtocol.EnterBarrier) {
           return mergeFrom((akka.remote.testconductor.TestConductorProtocol.EnterBarrier)other);
         } else {
@@ -2143,11 +2143,11 @@ public final class TestConductorProtocol {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -2200,7 +2200,7 @@ public final class TestConductorProtocol {
       public String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           name_ = s;
           return s;
         } else {
@@ -2222,7 +2222,7 @@ public final class TestConductorProtocol {
         onChanged();
         return this;
       }
-      void setName(com.google.protobuf.ByteString value) {
+      void setName(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000001;
         name_ = value;
         onChanged();
@@ -2285,7 +2285,7 @@ public final class TestConductorProtocol {
   }
   
   public interface AddressRequestOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required string node = 1;
     boolean hasNode();
@@ -2297,7 +2297,7 @@ public final class TestConductorProtocol {
     akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder getAddrOrBuilder();
   }
   public static final class AddressRequest extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements AddressRequestOrBuilder {
     // Use AddressRequest.newBuilder() to construct.
     private AddressRequest(Builder builder) {
@@ -2314,12 +2314,12 @@ public final class TestConductorProtocol {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_AddressRequest_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_AddressRequest_fieldAccessorTable;
     }
@@ -2336,24 +2336,24 @@ public final class TestConductorProtocol {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           node_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getNodeBytes() {
+    private com.google.protobuf_spark.ByteString getNodeBytes() {
       java.lang.Object ref = node_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         node_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -2393,7 +2393,7 @@ public final class TestConductorProtocol {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2412,11 +2412,11 @@ public final class TestConductorProtocol {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(1, getNodeBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(2, addr_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -2432,25 +2432,25 @@ public final class TestConductorProtocol {
     }
     
     public static akka.remote.testconductor.TestConductorProtocol.AddressRequest parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.AddressRequest parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.AddressRequest parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.AddressRequest parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -2460,7 +2460,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.AddressRequest parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -2476,7 +2476,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.AddressRequest parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -2486,13 +2486,13 @@ public final class TestConductorProtocol {
       }
     }
     public static akka.remote.testconductor.TestConductorProtocol.AddressRequest parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.AddressRequest parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -2507,19 +2507,19 @@ public final class TestConductorProtocol {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.testconductor.TestConductorProtocol.AddressRequestOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_AddressRequest_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_AddressRequest_fieldAccessorTable;
       }
@@ -2529,12 +2529,12 @@ public final class TestConductorProtocol {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getAddrFieldBuilder();
         }
       }
@@ -2559,7 +2559,7 @@ public final class TestConductorProtocol {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.testconductor.TestConductorProtocol.AddressRequest.getDescriptor();
       }
@@ -2577,7 +2577,7 @@ public final class TestConductorProtocol {
       }
       
       private akka.remote.testconductor.TestConductorProtocol.AddressRequest buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.testconductor.TestConductorProtocol.AddressRequest result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -2607,7 +2607,7 @@ public final class TestConductorProtocol {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.testconductor.TestConductorProtocol.AddressRequest) {
           return mergeFrom((akka.remote.testconductor.TestConductorProtocol.AddressRequest)other);
         } else {
@@ -2643,11 +2643,11 @@ public final class TestConductorProtocol {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -2693,7 +2693,7 @@ public final class TestConductorProtocol {
       public String getNode() {
         java.lang.Object ref = node_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           node_ = s;
           return s;
         } else {
@@ -2715,7 +2715,7 @@ public final class TestConductorProtocol {
         onChanged();
         return this;
       }
-      void setNode(com.google.protobuf.ByteString value) {
+      void setNode(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000001;
         node_ = value;
         onChanged();
@@ -2723,7 +2723,7 @@ public final class TestConductorProtocol {
       
       // optional .Address addr = 2;
       private akka.remote.testconductor.TestConductorProtocol.Address addr_ = akka.remote.testconductor.TestConductorProtocol.Address.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.Address, akka.remote.testconductor.TestConductorProtocol.Address.Builder, akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder> addrBuilder_;
       public boolean hasAddr() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
@@ -2797,11 +2797,11 @@ public final class TestConductorProtocol {
           return addr_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.Address, akka.remote.testconductor.TestConductorProtocol.Address.Builder, akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder> 
           getAddrFieldBuilder() {
         if (addrBuilder_ == null) {
-          addrBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          addrBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.testconductor.TestConductorProtocol.Address, akka.remote.testconductor.TestConductorProtocol.Address.Builder, akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder>(
                   addr_,
                   getParentForChildren(),
@@ -2823,7 +2823,7 @@ public final class TestConductorProtocol {
   }
   
   public interface AddressOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required string protocol = 1;
     boolean hasProtocol();
@@ -2842,7 +2842,7 @@ public final class TestConductorProtocol {
     int getPort();
   }
   public static final class Address extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements AddressOrBuilder {
     // Use Address.newBuilder() to construct.
     private Address(Builder builder) {
@@ -2859,12 +2859,12 @@ public final class TestConductorProtocol {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_Address_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_Address_fieldAccessorTable;
     }
@@ -2881,24 +2881,24 @@ public final class TestConductorProtocol {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           protocol_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getProtocolBytes() {
+    private com.google.protobuf_spark.ByteString getProtocolBytes() {
       java.lang.Object ref = protocol_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         protocol_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -2913,24 +2913,24 @@ public final class TestConductorProtocol {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           system_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSystemBytes() {
+    private com.google.protobuf_spark.ByteString getSystemBytes() {
       java.lang.Object ref = system_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         system_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -2945,24 +2945,24 @@ public final class TestConductorProtocol {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           host_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getHostBytes() {
+    private com.google.protobuf_spark.ByteString getHostBytes() {
       java.lang.Object ref = host_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         host_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -3007,7 +3007,7 @@ public final class TestConductorProtocol {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3032,19 +3032,19 @@ public final class TestConductorProtocol {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(1, getProtocolBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(2, getSystemBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(3, getHostBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeInt32Size(4, port_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -3060,25 +3060,25 @@ public final class TestConductorProtocol {
     }
     
     public static akka.remote.testconductor.TestConductorProtocol.Address parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Address parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Address parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Address parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -3088,7 +3088,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.Address parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -3104,7 +3104,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.Address parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -3114,13 +3114,13 @@ public final class TestConductorProtocol {
       }
     }
     public static akka.remote.testconductor.TestConductorProtocol.Address parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.Address parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -3135,19 +3135,19 @@ public final class TestConductorProtocol {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_Address_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_Address_fieldAccessorTable;
       }
@@ -3157,12 +3157,12 @@ public final class TestConductorProtocol {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -3186,7 +3186,7 @@ public final class TestConductorProtocol {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.testconductor.TestConductorProtocol.Address.getDescriptor();
       }
@@ -3204,7 +3204,7 @@ public final class TestConductorProtocol {
       }
       
       private akka.remote.testconductor.TestConductorProtocol.Address buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.testconductor.TestConductorProtocol.Address result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -3238,7 +3238,7 @@ public final class TestConductorProtocol {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.testconductor.TestConductorProtocol.Address) {
           return mergeFrom((akka.remote.testconductor.TestConductorProtocol.Address)other);
         } else {
@@ -3286,11 +3286,11 @@ public final class TestConductorProtocol {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -3342,7 +3342,7 @@ public final class TestConductorProtocol {
       public String getProtocol() {
         java.lang.Object ref = protocol_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           protocol_ = s;
           return s;
         } else {
@@ -3364,7 +3364,7 @@ public final class TestConductorProtocol {
         onChanged();
         return this;
       }
-      void setProtocol(com.google.protobuf.ByteString value) {
+      void setProtocol(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000001;
         protocol_ = value;
         onChanged();
@@ -3378,7 +3378,7 @@ public final class TestConductorProtocol {
       public String getSystem() {
         java.lang.Object ref = system_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           system_ = s;
           return s;
         } else {
@@ -3400,7 +3400,7 @@ public final class TestConductorProtocol {
         onChanged();
         return this;
       }
-      void setSystem(com.google.protobuf.ByteString value) {
+      void setSystem(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000002;
         system_ = value;
         onChanged();
@@ -3414,7 +3414,7 @@ public final class TestConductorProtocol {
       public String getHost() {
         java.lang.Object ref = host_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           host_ = s;
           return s;
         } else {
@@ -3436,7 +3436,7 @@ public final class TestConductorProtocol {
         onChanged();
         return this;
       }
-      void setHost(com.google.protobuf.ByteString value) {
+      void setHost(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000004;
         host_ = value;
         onChanged();
@@ -3475,7 +3475,7 @@ public final class TestConductorProtocol {
   }
   
   public interface InjectFailureOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required .FailType failure = 1;
     boolean hasFailure();
@@ -3499,7 +3499,7 @@ public final class TestConductorProtocol {
     int getExitValue();
   }
   public static final class InjectFailure extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements InjectFailureOrBuilder {
     // Use InjectFailure.newBuilder() to construct.
     private InjectFailure(Builder builder) {
@@ -3516,12 +3516,12 @@ public final class TestConductorProtocol {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_InjectFailure_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.testconductor.TestConductorProtocol.internal_static_InjectFailure_fieldAccessorTable;
     }
@@ -3606,7 +3606,7 @@ public final class TestConductorProtocol {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3634,23 +3634,23 @@ public final class TestConductorProtocol {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeEnumSize(1, failure_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeEnumSize(2, direction_.getNumber());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(3, address_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeFloatSize(6, rateMBit_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeInt32Size(7, exitValue_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -3666,25 +3666,25 @@ public final class TestConductorProtocol {
     }
     
     public static akka.remote.testconductor.TestConductorProtocol.InjectFailure parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.InjectFailure parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.InjectFailure parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.InjectFailure parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -3694,7 +3694,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.InjectFailure parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -3710,7 +3710,7 @@ public final class TestConductorProtocol {
     }
     public static akka.remote.testconductor.TestConductorProtocol.InjectFailure parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -3720,13 +3720,13 @@ public final class TestConductorProtocol {
       }
     }
     public static akka.remote.testconductor.TestConductorProtocol.InjectFailure parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.testconductor.TestConductorProtocol.InjectFailure parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -3741,19 +3741,19 @@ public final class TestConductorProtocol {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.testconductor.TestConductorProtocol.InjectFailureOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_InjectFailure_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.testconductor.TestConductorProtocol.internal_static_InjectFailure_fieldAccessorTable;
       }
@@ -3763,12 +3763,12 @@ public final class TestConductorProtocol {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getAddressFieldBuilder();
         }
       }
@@ -3799,7 +3799,7 @@ public final class TestConductorProtocol {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.testconductor.TestConductorProtocol.InjectFailure.getDescriptor();
       }
@@ -3817,7 +3817,7 @@ public final class TestConductorProtocol {
       }
       
       private akka.remote.testconductor.TestConductorProtocol.InjectFailure buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.testconductor.TestConductorProtocol.InjectFailure result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -3859,7 +3859,7 @@ public final class TestConductorProtocol {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.testconductor.TestConductorProtocol.InjectFailure) {
           return mergeFrom((akka.remote.testconductor.TestConductorProtocol.InjectFailure)other);
         } else {
@@ -3904,11 +3904,11 @@ public final class TestConductorProtocol {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -4023,7 +4023,7 @@ public final class TestConductorProtocol {
       
       // optional .Address address = 3;
       private akka.remote.testconductor.TestConductorProtocol.Address address_ = akka.remote.testconductor.TestConductorProtocol.Address.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.Address, akka.remote.testconductor.TestConductorProtocol.Address.Builder, akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder> addressBuilder_;
       public boolean hasAddress() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
@@ -4097,11 +4097,11 @@ public final class TestConductorProtocol {
           return address_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.testconductor.TestConductorProtocol.Address, akka.remote.testconductor.TestConductorProtocol.Address.Builder, akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder> 
           getAddressFieldBuilder() {
         if (addressBuilder_ == null) {
-          addressBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          addressBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.testconductor.TestConductorProtocol.Address, akka.remote.testconductor.TestConductorProtocol.Address.Builder, akka.remote.testconductor.TestConductorProtocol.AddressOrBuilder>(
                   address_,
                   getParentForChildren(),
@@ -4164,42 +4164,42 @@ public final class TestConductorProtocol {
     // @@protoc_insertion_point(class_scope:InjectFailure)
   }
   
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_Wrapper_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_Wrapper_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_Hello_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_Hello_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_EnterBarrier_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_EnterBarrier_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_AddressRequest_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_AddressRequest_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_Address_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_Address_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_InjectFailure_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_InjectFailure_fieldAccessorTable;
   
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static com.google.protobuf_spark.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static com.google.protobuf_spark.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -4224,15 +4224,15 @@ public final class TestConductorProtocol {
       "Send\020\001\022\013\n\007Receive\020\002\022\010\n\004Both\020\003B\035\n\031akka.re" +
       "mote.testconductorH\001"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
+    com.google.protobuf_spark.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+      new com.google.protobuf_spark.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+        public com.google.protobuf_spark.ExtensionRegistry assignDescriptors(
+            com.google.protobuf_spark.Descriptors.FileDescriptor root) {
           descriptor = root;
           internal_static_Wrapper_descriptor =
             getDescriptor().getMessageTypes().get(0);
           internal_static_Wrapper_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_Wrapper_descriptor,
               new java.lang.String[] { "Hello", "Barrier", "Failure", "Done", "Addr", },
               akka.remote.testconductor.TestConductorProtocol.Wrapper.class,
@@ -4240,7 +4240,7 @@ public final class TestConductorProtocol {
           internal_static_Hello_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_Hello_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_Hello_descriptor,
               new java.lang.String[] { "Name", "Address", },
               akka.remote.testconductor.TestConductorProtocol.Hello.class,
@@ -4248,7 +4248,7 @@ public final class TestConductorProtocol {
           internal_static_EnterBarrier_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_EnterBarrier_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_EnterBarrier_descriptor,
               new java.lang.String[] { "Name", "Op", "Timeout", },
               akka.remote.testconductor.TestConductorProtocol.EnterBarrier.class,
@@ -4256,7 +4256,7 @@ public final class TestConductorProtocol {
           internal_static_AddressRequest_descriptor =
             getDescriptor().getMessageTypes().get(3);
           internal_static_AddressRequest_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_AddressRequest_descriptor,
               new java.lang.String[] { "Node", "Addr", },
               akka.remote.testconductor.TestConductorProtocol.AddressRequest.class,
@@ -4264,7 +4264,7 @@ public final class TestConductorProtocol {
           internal_static_Address_descriptor =
             getDescriptor().getMessageTypes().get(4);
           internal_static_Address_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_Address_descriptor,
               new java.lang.String[] { "Protocol", "System", "Host", "Port", },
               akka.remote.testconductor.TestConductorProtocol.Address.class,
@@ -4272,7 +4272,7 @@ public final class TestConductorProtocol {
           internal_static_InjectFailure_descriptor =
             getDescriptor().getMessageTypes().get(5);
           internal_static_InjectFailure_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_InjectFailure_descriptor,
               new java.lang.String[] { "Failure", "Direction", "Address", "RateMBit", "ExitValue", },
               akka.remote.testconductor.TestConductorProtocol.InjectFailure.class,
@@ -4280,9 +4280,9 @@ public final class TestConductorProtocol {
           return null;
         }
       };
-    com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf_spark.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new com.google.protobuf_spark.Descriptors.FileDescriptor[] {
         }, assigner);
   }
   

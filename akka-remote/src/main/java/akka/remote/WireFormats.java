@@ -6,10 +6,10 @@ package akka.remote;
 public final class WireFormats {
   private WireFormats() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      com.google.protobuf_spark.ExtensionRegistry registry) {
   }
   public enum CommandType
-      implements com.google.protobuf.ProtocolMessageEnum {
+      implements com.google.protobuf_spark.ProtocolMessageEnum {
     ASSOCIATE(0, 1),
     DISASSOCIATE(1, 2),
     HEARTBEAT(2, 3),
@@ -37,27 +37,27 @@ public final class WireFormats {
       }
     }
     
-    public static com.google.protobuf.Internal.EnumLiteMap<CommandType>
+    public static com.google.protobuf_spark.Internal.EnumLiteMap<CommandType>
         internalGetValueMap() {
       return internalValueMap;
     }
-    private static com.google.protobuf.Internal.EnumLiteMap<CommandType>
+    private static com.google.protobuf_spark.Internal.EnumLiteMap<CommandType>
         internalValueMap =
-          new com.google.protobuf.Internal.EnumLiteMap<CommandType>() {
+          new com.google.protobuf_spark.Internal.EnumLiteMap<CommandType>() {
             public CommandType findValueByNumber(int number) {
               return CommandType.valueOf(number);
             }
           };
     
-    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+    public final com.google.protobuf_spark.Descriptors.EnumValueDescriptor
         getValueDescriptor() {
       return getDescriptor().getValues().get(index);
     }
-    public final com.google.protobuf.Descriptors.EnumDescriptor
+    public final com.google.protobuf_spark.Descriptors.EnumDescriptor
         getDescriptorForType() {
       return getDescriptor();
     }
-    public static final com.google.protobuf.Descriptors.EnumDescriptor
+    public static final com.google.protobuf_spark.Descriptors.EnumDescriptor
         getDescriptor() {
       return akka.remote.WireFormats.getDescriptor().getEnumTypes().get(0);
     }
@@ -67,7 +67,7 @@ public final class WireFormats {
     };
     
     public static CommandType valueOf(
-        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+        com.google.protobuf_spark.Descriptors.EnumValueDescriptor desc) {
       if (desc.getType() != getDescriptor()) {
         throw new java.lang.IllegalArgumentException(
           "EnumValueDescriptor is not for this type.");
@@ -87,7 +87,7 @@ public final class WireFormats {
   }
   
   public interface AckAndEnvelopeContainerOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // optional .AcknowledgementInfo ack = 1;
     boolean hasAck();
@@ -100,7 +100,7 @@ public final class WireFormats {
     akka.remote.WireFormats.RemoteEnvelopeOrBuilder getEnvelopeOrBuilder();
   }
   public static final class AckAndEnvelopeContainer extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements AckAndEnvelopeContainerOrBuilder {
     // Use AckAndEnvelopeContainer.newBuilder() to construct.
     private AckAndEnvelopeContainer(Builder builder) {
@@ -117,12 +117,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_AckAndEnvelopeContainer_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_AckAndEnvelopeContainer_fieldAccessorTable;
     }
@@ -179,7 +179,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -198,11 +198,11 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(1, ack_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(2, envelope_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -218,25 +218,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.AckAndEnvelopeContainer parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AckAndEnvelopeContainer parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.AckAndEnvelopeContainer parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AckAndEnvelopeContainer parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -246,7 +246,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AckAndEnvelopeContainer parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -262,7 +262,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AckAndEnvelopeContainer parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -272,13 +272,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.AckAndEnvelopeContainer parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.AckAndEnvelopeContainer parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -293,19 +293,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.AckAndEnvelopeContainerOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_AckAndEnvelopeContainer_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_AckAndEnvelopeContainer_fieldAccessorTable;
       }
@@ -315,12 +315,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getAckFieldBuilder();
           getEnvelopeFieldBuilder();
         }
@@ -350,7 +350,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.AckAndEnvelopeContainer.getDescriptor();
       }
@@ -368,7 +368,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.AckAndEnvelopeContainer buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.AckAndEnvelopeContainer result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -402,7 +402,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.AckAndEnvelopeContainer) {
           return mergeFrom((akka.remote.WireFormats.AckAndEnvelopeContainer)other);
         } else {
@@ -440,11 +440,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -488,7 +488,7 @@ public final class WireFormats {
       
       // optional .AcknowledgementInfo ack = 1;
       private akka.remote.WireFormats.AcknowledgementInfo ack_ = akka.remote.WireFormats.AcknowledgementInfo.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.AcknowledgementInfo, akka.remote.WireFormats.AcknowledgementInfo.Builder, akka.remote.WireFormats.AcknowledgementInfoOrBuilder> ackBuilder_;
       public boolean hasAck() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
@@ -562,11 +562,11 @@ public final class WireFormats {
           return ack_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.AcknowledgementInfo, akka.remote.WireFormats.AcknowledgementInfo.Builder, akka.remote.WireFormats.AcknowledgementInfoOrBuilder> 
           getAckFieldBuilder() {
         if (ackBuilder_ == null) {
-          ackBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          ackBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.AcknowledgementInfo, akka.remote.WireFormats.AcknowledgementInfo.Builder, akka.remote.WireFormats.AcknowledgementInfoOrBuilder>(
                   ack_,
                   getParentForChildren(),
@@ -578,7 +578,7 @@ public final class WireFormats {
       
       // optional .RemoteEnvelope envelope = 2;
       private akka.remote.WireFormats.RemoteEnvelope envelope_ = akka.remote.WireFormats.RemoteEnvelope.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.RemoteEnvelope, akka.remote.WireFormats.RemoteEnvelope.Builder, akka.remote.WireFormats.RemoteEnvelopeOrBuilder> envelopeBuilder_;
       public boolean hasEnvelope() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
@@ -652,11 +652,11 @@ public final class WireFormats {
           return envelope_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.RemoteEnvelope, akka.remote.WireFormats.RemoteEnvelope.Builder, akka.remote.WireFormats.RemoteEnvelopeOrBuilder> 
           getEnvelopeFieldBuilder() {
         if (envelopeBuilder_ == null) {
-          envelopeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          envelopeBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.RemoteEnvelope, akka.remote.WireFormats.RemoteEnvelope.Builder, akka.remote.WireFormats.RemoteEnvelopeOrBuilder>(
                   envelope_,
                   getParentForChildren(),
@@ -678,7 +678,7 @@ public final class WireFormats {
   }
   
   public interface RemoteEnvelopeOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required .ActorRefData recipient = 1;
     boolean hasRecipient();
@@ -700,7 +700,7 @@ public final class WireFormats {
     long getSeq();
   }
   public static final class RemoteEnvelope extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements RemoteEnvelopeOrBuilder {
     // Use RemoteEnvelope.newBuilder() to construct.
     private RemoteEnvelope(Builder builder) {
@@ -717,12 +717,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_RemoteEnvelope_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_RemoteEnvelope_fieldAccessorTable;
     }
@@ -814,7 +814,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -839,19 +839,19 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(1, recipient_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(2, message_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(4, sender_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeFixed64Size(5, seq_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -867,25 +867,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.RemoteEnvelope parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.RemoteEnvelope parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.RemoteEnvelope parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.RemoteEnvelope parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -895,7 +895,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.RemoteEnvelope parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -911,7 +911,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.RemoteEnvelope parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -921,13 +921,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.RemoteEnvelope parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.RemoteEnvelope parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -942,19 +942,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.RemoteEnvelopeOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_RemoteEnvelope_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_RemoteEnvelope_fieldAccessorTable;
       }
@@ -964,12 +964,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getRecipientFieldBuilder();
           getMessageFieldBuilder();
           getSenderFieldBuilder();
@@ -1008,7 +1008,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.RemoteEnvelope.getDescriptor();
       }
@@ -1026,7 +1026,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.RemoteEnvelope buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.RemoteEnvelope result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -1072,7 +1072,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.RemoteEnvelope) {
           return mergeFrom((akka.remote.WireFormats.RemoteEnvelope)other);
         } else {
@@ -1126,11 +1126,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -1188,7 +1188,7 @@ public final class WireFormats {
       
       // required .ActorRefData recipient = 1;
       private akka.remote.WireFormats.ActorRefData recipient_ = akka.remote.WireFormats.ActorRefData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.ActorRefData, akka.remote.WireFormats.ActorRefData.Builder, akka.remote.WireFormats.ActorRefDataOrBuilder> recipientBuilder_;
       public boolean hasRecipient() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
@@ -1262,11 +1262,11 @@ public final class WireFormats {
           return recipient_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.ActorRefData, akka.remote.WireFormats.ActorRefData.Builder, akka.remote.WireFormats.ActorRefDataOrBuilder> 
           getRecipientFieldBuilder() {
         if (recipientBuilder_ == null) {
-          recipientBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          recipientBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.ActorRefData, akka.remote.WireFormats.ActorRefData.Builder, akka.remote.WireFormats.ActorRefDataOrBuilder>(
                   recipient_,
                   getParentForChildren(),
@@ -1278,7 +1278,7 @@ public final class WireFormats {
       
       // required .SerializedMessage message = 2;
       private akka.remote.WireFormats.SerializedMessage message_ = akka.remote.WireFormats.SerializedMessage.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.SerializedMessage, akka.remote.WireFormats.SerializedMessage.Builder, akka.remote.WireFormats.SerializedMessageOrBuilder> messageBuilder_;
       public boolean hasMessage() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
@@ -1352,11 +1352,11 @@ public final class WireFormats {
           return message_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.SerializedMessage, akka.remote.WireFormats.SerializedMessage.Builder, akka.remote.WireFormats.SerializedMessageOrBuilder> 
           getMessageFieldBuilder() {
         if (messageBuilder_ == null) {
-          messageBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          messageBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.SerializedMessage, akka.remote.WireFormats.SerializedMessage.Builder, akka.remote.WireFormats.SerializedMessageOrBuilder>(
                   message_,
                   getParentForChildren(),
@@ -1368,7 +1368,7 @@ public final class WireFormats {
       
       // optional .ActorRefData sender = 4;
       private akka.remote.WireFormats.ActorRefData sender_ = akka.remote.WireFormats.ActorRefData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.ActorRefData, akka.remote.WireFormats.ActorRefData.Builder, akka.remote.WireFormats.ActorRefDataOrBuilder> senderBuilder_;
       public boolean hasSender() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
@@ -1442,11 +1442,11 @@ public final class WireFormats {
           return sender_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.ActorRefData, akka.remote.WireFormats.ActorRefData.Builder, akka.remote.WireFormats.ActorRefDataOrBuilder> 
           getSenderFieldBuilder() {
         if (senderBuilder_ == null) {
-          senderBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          senderBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.ActorRefData, akka.remote.WireFormats.ActorRefData.Builder, akka.remote.WireFormats.ActorRefDataOrBuilder>(
                   sender_,
                   getParentForChildren(),
@@ -1489,7 +1489,7 @@ public final class WireFormats {
   }
   
   public interface AcknowledgementInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required fixed64 cumulativeAck = 1;
     boolean hasCumulativeAck();
@@ -1501,7 +1501,7 @@ public final class WireFormats {
     long getNacks(int index);
   }
   public static final class AcknowledgementInfo extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements AcknowledgementInfoOrBuilder {
     // Use AcknowledgementInfo.newBuilder() to construct.
     private AcknowledgementInfo(Builder builder) {
@@ -1518,12 +1518,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_AcknowledgementInfo_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_AcknowledgementInfo_fieldAccessorTable;
     }
@@ -1570,7 +1570,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -1589,7 +1589,7 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeFixed64Size(1, cumulativeAck_);
       }
       {
@@ -1611,25 +1611,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.AcknowledgementInfo parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AcknowledgementInfo parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.AcknowledgementInfo parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AcknowledgementInfo parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -1639,7 +1639,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AcknowledgementInfo parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -1655,7 +1655,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AcknowledgementInfo parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -1665,13 +1665,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.AcknowledgementInfo parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.AcknowledgementInfo parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -1686,19 +1686,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.AcknowledgementInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_AcknowledgementInfo_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_AcknowledgementInfo_fieldAccessorTable;
       }
@@ -1708,12 +1708,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -1733,7 +1733,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.AcknowledgementInfo.getDescriptor();
       }
@@ -1751,7 +1751,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.AcknowledgementInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.AcknowledgementInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -1778,7 +1778,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.AcknowledgementInfo) {
           return mergeFrom((akka.remote.WireFormats.AcknowledgementInfo)other);
         } else {
@@ -1815,11 +1815,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -1940,14 +1940,14 @@ public final class WireFormats {
   }
   
   public interface ActorRefDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required string path = 1;
     boolean hasPath();
     String getPath();
   }
   public static final class ActorRefData extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements ActorRefDataOrBuilder {
     // Use ActorRefData.newBuilder() to construct.
     private ActorRefData(Builder builder) {
@@ -1964,12 +1964,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_ActorRefData_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_ActorRefData_fieldAccessorTable;
     }
@@ -1986,24 +1986,24 @@ public final class WireFormats {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           path_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getPathBytes() {
+    private com.google.protobuf_spark.ByteString getPathBytes() {
       java.lang.Object ref = path_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         path_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -2023,7 +2023,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2039,7 +2039,7 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(1, getPathBytes());
       }
       size += getUnknownFields().getSerializedSize();
@@ -2055,25 +2055,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.ActorRefData parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.ActorRefData parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.ActorRefData parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.ActorRefData parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -2083,7 +2083,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.ActorRefData parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -2099,7 +2099,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.ActorRefData parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -2109,13 +2109,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.ActorRefData parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.ActorRefData parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -2130,19 +2130,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.ActorRefDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_ActorRefData_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_ActorRefData_fieldAccessorTable;
       }
@@ -2152,12 +2152,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -2175,7 +2175,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.ActorRefData.getDescriptor();
       }
@@ -2193,7 +2193,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.ActorRefData buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.ActorRefData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -2215,7 +2215,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.ActorRefData) {
           return mergeFrom((akka.remote.WireFormats.ActorRefData)other);
         } else {
@@ -2242,11 +2242,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -2283,7 +2283,7 @@ public final class WireFormats {
       public String getPath() {
         java.lang.Object ref = path_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           path_ = s;
           return s;
         } else {
@@ -2305,7 +2305,7 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      void setPath(com.google.protobuf.ByteString value) {
+      void setPath(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000001;
         path_ = value;
         onChanged();
@@ -2323,11 +2323,11 @@ public final class WireFormats {
   }
   
   public interface SerializedMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required bytes message = 1;
     boolean hasMessage();
-    com.google.protobuf.ByteString getMessage();
+    com.google.protobuf_spark.ByteString getMessage();
     
     // required int32 serializerId = 2;
     boolean hasSerializerId();
@@ -2335,10 +2335,10 @@ public final class WireFormats {
     
     // optional bytes messageManifest = 3;
     boolean hasMessageManifest();
-    com.google.protobuf.ByteString getMessageManifest();
+    com.google.protobuf_spark.ByteString getMessageManifest();
   }
   public static final class SerializedMessage extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements SerializedMessageOrBuilder {
     // Use SerializedMessage.newBuilder() to construct.
     private SerializedMessage(Builder builder) {
@@ -2355,12 +2355,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_SerializedMessage_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_SerializedMessage_fieldAccessorTable;
     }
@@ -2368,11 +2368,11 @@ public final class WireFormats {
     private int bitField0_;
     // required bytes message = 1;
     public static final int MESSAGE_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString message_;
+    private com.google.protobuf_spark.ByteString message_;
     public boolean hasMessage() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public com.google.protobuf.ByteString getMessage() {
+    public com.google.protobuf_spark.ByteString getMessage() {
       return message_;
     }
     
@@ -2388,18 +2388,18 @@ public final class WireFormats {
     
     // optional bytes messageManifest = 3;
     public static final int MESSAGEMANIFEST_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString messageManifest_;
+    private com.google.protobuf_spark.ByteString messageManifest_;
     public boolean hasMessageManifest() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public com.google.protobuf.ByteString getMessageManifest() {
+    public com.google.protobuf_spark.ByteString getMessageManifest() {
       return messageManifest_;
     }
     
     private void initFields() {
-      message_ = com.google.protobuf.ByteString.EMPTY;
+      message_ = com.google.protobuf_spark.ByteString.EMPTY;
       serializerId_ = 0;
-      messageManifest_ = com.google.protobuf.ByteString.EMPTY;
+      messageManifest_ = com.google.protobuf_spark.ByteString.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -2418,7 +2418,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2440,15 +2440,15 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(1, message_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeInt32Size(2, serializerId_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(3, messageManifest_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -2464,25 +2464,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.SerializedMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.SerializedMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.SerializedMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.SerializedMessage parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -2492,7 +2492,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.SerializedMessage parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -2508,7 +2508,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.SerializedMessage parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -2518,13 +2518,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.SerializedMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.SerializedMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -2539,19 +2539,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.SerializedMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_SerializedMessage_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_SerializedMessage_fieldAccessorTable;
       }
@@ -2561,12 +2561,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -2575,11 +2575,11 @@ public final class WireFormats {
       
       public Builder clear() {
         super.clear();
-        message_ = com.google.protobuf.ByteString.EMPTY;
+        message_ = com.google.protobuf_spark.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         serializerId_ = 0;
         bitField0_ = (bitField0_ & ~0x00000002);
-        messageManifest_ = com.google.protobuf.ByteString.EMPTY;
+        messageManifest_ = com.google.protobuf_spark.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
         return this;
       }
@@ -2588,7 +2588,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.SerializedMessage.getDescriptor();
       }
@@ -2606,7 +2606,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.SerializedMessage buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.SerializedMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -2636,7 +2636,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.SerializedMessage) {
           return mergeFrom((akka.remote.WireFormats.SerializedMessage)other);
         } else {
@@ -2673,11 +2673,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -2717,14 +2717,14 @@ public final class WireFormats {
       private int bitField0_;
       
       // required bytes message = 1;
-      private com.google.protobuf.ByteString message_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf_spark.ByteString message_ = com.google.protobuf_spark.ByteString.EMPTY;
       public boolean hasMessage() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public com.google.protobuf.ByteString getMessage() {
+      public com.google.protobuf_spark.ByteString getMessage() {
         return message_;
       }
-      public Builder setMessage(com.google.protobuf.ByteString value) {
+      public Builder setMessage(com.google.protobuf_spark.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2762,14 +2762,14 @@ public final class WireFormats {
       }
       
       // optional bytes messageManifest = 3;
-      private com.google.protobuf.ByteString messageManifest_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf_spark.ByteString messageManifest_ = com.google.protobuf_spark.ByteString.EMPTY;
       public boolean hasMessageManifest() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public com.google.protobuf.ByteString getMessageManifest() {
+      public com.google.protobuf_spark.ByteString getMessageManifest() {
         return messageManifest_;
       }
-      public Builder setMessageManifest(com.google.protobuf.ByteString value) {
+      public Builder setMessageManifest(com.google.protobuf_spark.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -2797,7 +2797,7 @@ public final class WireFormats {
   }
   
   public interface DaemonMsgCreateDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required .PropsData props = 1;
     boolean hasProps();
@@ -2819,7 +2819,7 @@ public final class WireFormats {
     akka.remote.WireFormats.ActorRefDataOrBuilder getSupervisorOrBuilder();
   }
   public static final class DaemonMsgCreateData extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements DaemonMsgCreateDataOrBuilder {
     // Use DaemonMsgCreateData.newBuilder() to construct.
     private DaemonMsgCreateData(Builder builder) {
@@ -2836,12 +2836,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_DaemonMsgCreateData_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_DaemonMsgCreateData_fieldAccessorTable;
     }
@@ -2884,24 +2884,24 @@ public final class WireFormats {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           path_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getPathBytes() {
+    private com.google.protobuf_spark.ByteString getPathBytes() {
       java.lang.Object ref = path_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         path_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -2961,7 +2961,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -2986,19 +2986,19 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(1, props_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(2, deploy_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(3, getPathBytes());
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(4, supervisor_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -3014,25 +3014,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.DaemonMsgCreateData parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.DaemonMsgCreateData parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.DaemonMsgCreateData parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.DaemonMsgCreateData parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -3042,7 +3042,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.DaemonMsgCreateData parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -3058,7 +3058,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.DaemonMsgCreateData parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -3068,13 +3068,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.DaemonMsgCreateData parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.DaemonMsgCreateData parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -3089,19 +3089,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.DaemonMsgCreateDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_DaemonMsgCreateData_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_DaemonMsgCreateData_fieldAccessorTable;
       }
@@ -3111,12 +3111,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getPropsFieldBuilder();
           getDeployFieldBuilder();
           getSupervisorFieldBuilder();
@@ -3155,7 +3155,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.DaemonMsgCreateData.getDescriptor();
       }
@@ -3173,7 +3173,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.DaemonMsgCreateData buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.DaemonMsgCreateData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -3219,7 +3219,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.DaemonMsgCreateData) {
           return mergeFrom((akka.remote.WireFormats.DaemonMsgCreateData)other);
         } else {
@@ -3279,11 +3279,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -3341,7 +3341,7 @@ public final class WireFormats {
       
       // required .PropsData props = 1;
       private akka.remote.WireFormats.PropsData props_ = akka.remote.WireFormats.PropsData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.PropsData, akka.remote.WireFormats.PropsData.Builder, akka.remote.WireFormats.PropsDataOrBuilder> propsBuilder_;
       public boolean hasProps() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
@@ -3415,11 +3415,11 @@ public final class WireFormats {
           return props_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.PropsData, akka.remote.WireFormats.PropsData.Builder, akka.remote.WireFormats.PropsDataOrBuilder> 
           getPropsFieldBuilder() {
         if (propsBuilder_ == null) {
-          propsBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          propsBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.PropsData, akka.remote.WireFormats.PropsData.Builder, akka.remote.WireFormats.PropsDataOrBuilder>(
                   props_,
                   getParentForChildren(),
@@ -3431,7 +3431,7 @@ public final class WireFormats {
       
       // required .DeployData deploy = 2;
       private akka.remote.WireFormats.DeployData deploy_ = akka.remote.WireFormats.DeployData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.DeployData, akka.remote.WireFormats.DeployData.Builder, akka.remote.WireFormats.DeployDataOrBuilder> deployBuilder_;
       public boolean hasDeploy() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
@@ -3505,11 +3505,11 @@ public final class WireFormats {
           return deploy_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.DeployData, akka.remote.WireFormats.DeployData.Builder, akka.remote.WireFormats.DeployDataOrBuilder> 
           getDeployFieldBuilder() {
         if (deployBuilder_ == null) {
-          deployBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          deployBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.DeployData, akka.remote.WireFormats.DeployData.Builder, akka.remote.WireFormats.DeployDataOrBuilder>(
                   deploy_,
                   getParentForChildren(),
@@ -3527,7 +3527,7 @@ public final class WireFormats {
       public String getPath() {
         java.lang.Object ref = path_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           path_ = s;
           return s;
         } else {
@@ -3549,7 +3549,7 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      void setPath(com.google.protobuf.ByteString value) {
+      void setPath(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000004;
         path_ = value;
         onChanged();
@@ -3557,7 +3557,7 @@ public final class WireFormats {
       
       // required .ActorRefData supervisor = 4;
       private akka.remote.WireFormats.ActorRefData supervisor_ = akka.remote.WireFormats.ActorRefData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.ActorRefData, akka.remote.WireFormats.ActorRefData.Builder, akka.remote.WireFormats.ActorRefDataOrBuilder> supervisorBuilder_;
       public boolean hasSupervisor() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
@@ -3631,11 +3631,11 @@ public final class WireFormats {
           return supervisor_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.ActorRefData, akka.remote.WireFormats.ActorRefData.Builder, akka.remote.WireFormats.ActorRefDataOrBuilder> 
           getSupervisorFieldBuilder() {
         if (supervisorBuilder_ == null) {
-          supervisorBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          supervisorBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.ActorRefData, akka.remote.WireFormats.ActorRefData.Builder, akka.remote.WireFormats.ActorRefDataOrBuilder>(
                   supervisor_,
                   getParentForChildren(),
@@ -3657,7 +3657,7 @@ public final class WireFormats {
   }
   
   public interface PropsDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required .DeployData deploy = 2;
     boolean hasDeploy();
@@ -3669,9 +3669,9 @@ public final class WireFormats {
     String getClazz();
     
     // repeated bytes args = 4;
-    java.util.List<com.google.protobuf.ByteString> getArgsList();
+    java.util.List<com.google.protobuf_spark.ByteString> getArgsList();
     int getArgsCount();
-    com.google.protobuf.ByteString getArgs(int index);
+    com.google.protobuf_spark.ByteString getArgs(int index);
     
     // repeated string classes = 5;
     java.util.List<String> getClassesList();
@@ -3679,7 +3679,7 @@ public final class WireFormats {
     String getClasses(int index);
   }
   public static final class PropsData extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements PropsDataOrBuilder {
     // Use PropsData.newBuilder() to construct.
     private PropsData(Builder builder) {
@@ -3696,12 +3696,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_PropsData_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_PropsData_fieldAccessorTable;
     }
@@ -3731,44 +3731,44 @@ public final class WireFormats {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           clazz_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getClazzBytes() {
+    private com.google.protobuf_spark.ByteString getClazzBytes() {
       java.lang.Object ref = clazz_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         clazz_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
     // repeated bytes args = 4;
     public static final int ARGS_FIELD_NUMBER = 4;
-    private java.util.List<com.google.protobuf.ByteString> args_;
-    public java.util.List<com.google.protobuf.ByteString>
+    private java.util.List<com.google.protobuf_spark.ByteString> args_;
+    public java.util.List<com.google.protobuf_spark.ByteString>
         getArgsList() {
       return args_;
     }
     public int getArgsCount() {
       return args_.size();
     }
-    public com.google.protobuf.ByteString getArgs(int index) {
+    public com.google.protobuf_spark.ByteString getArgs(int index) {
       return args_.get(index);
     }
     
     // repeated string classes = 5;
     public static final int CLASSES_FIELD_NUMBER = 5;
-    private com.google.protobuf.LazyStringList classes_;
+    private com.google.protobuf_spark.LazyStringList classes_;
     public java.util.List<String>
         getClassesList() {
       return classes_;
@@ -3784,7 +3784,7 @@ public final class WireFormats {
       deploy_ = akka.remote.WireFormats.DeployData.getDefaultInstance();
       clazz_ = "";
       args_ = java.util.Collections.emptyList();;
-      classes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      classes_ = com.google.protobuf_spark.LazyStringArrayList.EMPTY;
     }
     private byte memoizedIsInitialized = -1;
     public final boolean isInitialized() {
@@ -3807,7 +3807,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -3832,17 +3832,17 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(2, deploy_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(3, getClazzBytes());
       }
       {
         int dataSize = 0;
         for (int i = 0; i < args_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += com.google.protobuf_spark.CodedOutputStream
             .computeBytesSizeNoTag(args_.get(i));
         }
         size += dataSize;
@@ -3851,7 +3851,7 @@ public final class WireFormats {
       {
         int dataSize = 0;
         for (int i = 0; i < classes_.size(); i++) {
-          dataSize += com.google.protobuf.CodedOutputStream
+          dataSize += com.google.protobuf_spark.CodedOutputStream
             .computeBytesSizeNoTag(classes_.getByteString(i));
         }
         size += dataSize;
@@ -3870,25 +3870,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.PropsData parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.PropsData parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.PropsData parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.PropsData parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -3898,7 +3898,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.PropsData parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -3914,7 +3914,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.PropsData parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -3924,13 +3924,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.PropsData parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.PropsData parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -3945,19 +3945,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.PropsDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_PropsData_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_PropsData_fieldAccessorTable;
       }
@@ -3967,12 +3967,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getDeployFieldBuilder();
         }
       }
@@ -3992,7 +3992,7 @@ public final class WireFormats {
         bitField0_ = (bitField0_ & ~0x00000002);
         args_ = java.util.Collections.emptyList();;
         bitField0_ = (bitField0_ & ~0x00000004);
-        classes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        classes_ = com.google.protobuf_spark.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
         return this;
       }
@@ -4001,7 +4001,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.PropsData.getDescriptor();
       }
@@ -4019,7 +4019,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.PropsData buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.PropsData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -4050,7 +4050,7 @@ public final class WireFormats {
         }
         result.args_ = args_;
         if (((bitField0_ & 0x00000008) == 0x00000008)) {
-          classes_ = new com.google.protobuf.UnmodifiableLazyStringList(
+          classes_ = new com.google.protobuf_spark.UnmodifiableLazyStringList(
               classes_);
           bitField0_ = (bitField0_ & ~0x00000008);
         }
@@ -4060,7 +4060,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.PropsData) {
           return mergeFrom((akka.remote.WireFormats.PropsData)other);
         } else {
@@ -4118,11 +4118,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -4172,7 +4172,7 @@ public final class WireFormats {
       
       // required .DeployData deploy = 2;
       private akka.remote.WireFormats.DeployData deploy_ = akka.remote.WireFormats.DeployData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.DeployData, akka.remote.WireFormats.DeployData.Builder, akka.remote.WireFormats.DeployDataOrBuilder> deployBuilder_;
       public boolean hasDeploy() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
@@ -4246,11 +4246,11 @@ public final class WireFormats {
           return deploy_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.DeployData, akka.remote.WireFormats.DeployData.Builder, akka.remote.WireFormats.DeployDataOrBuilder> 
           getDeployFieldBuilder() {
         if (deployBuilder_ == null) {
-          deployBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          deployBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.DeployData, akka.remote.WireFormats.DeployData.Builder, akka.remote.WireFormats.DeployDataOrBuilder>(
                   deploy_,
                   getParentForChildren(),
@@ -4268,7 +4268,7 @@ public final class WireFormats {
       public String getClazz() {
         java.lang.Object ref = clazz_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           clazz_ = s;
           return s;
         } else {
@@ -4290,32 +4290,32 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      void setClazz(com.google.protobuf.ByteString value) {
+      void setClazz(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000002;
         clazz_ = value;
         onChanged();
       }
       
       // repeated bytes args = 4;
-      private java.util.List<com.google.protobuf.ByteString> args_ = java.util.Collections.emptyList();;
+      private java.util.List<com.google.protobuf_spark.ByteString> args_ = java.util.Collections.emptyList();;
       private void ensureArgsIsMutable() {
         if (!((bitField0_ & 0x00000004) == 0x00000004)) {
-          args_ = new java.util.ArrayList<com.google.protobuf.ByteString>(args_);
+          args_ = new java.util.ArrayList<com.google.protobuf_spark.ByteString>(args_);
           bitField0_ |= 0x00000004;
          }
       }
-      public java.util.List<com.google.protobuf.ByteString>
+      public java.util.List<com.google.protobuf_spark.ByteString>
           getArgsList() {
         return java.util.Collections.unmodifiableList(args_);
       }
       public int getArgsCount() {
         return args_.size();
       }
-      public com.google.protobuf.ByteString getArgs(int index) {
+      public com.google.protobuf_spark.ByteString getArgs(int index) {
         return args_.get(index);
       }
       public Builder setArgs(
-          int index, com.google.protobuf.ByteString value) {
+          int index, com.google.protobuf_spark.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4324,7 +4324,7 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      public Builder addArgs(com.google.protobuf.ByteString value) {
+      public Builder addArgs(com.google.protobuf_spark.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4334,7 +4334,7 @@ public final class WireFormats {
         return this;
       }
       public Builder addAllArgs(
-          java.lang.Iterable<? extends com.google.protobuf.ByteString> values) {
+          java.lang.Iterable<? extends com.google.protobuf_spark.ByteString> values) {
         ensureArgsIsMutable();
         super.addAll(values, args_);
         onChanged();
@@ -4348,10 +4348,10 @@ public final class WireFormats {
       }
       
       // repeated string classes = 5;
-      private com.google.protobuf.LazyStringList classes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      private com.google.protobuf_spark.LazyStringList classes_ = com.google.protobuf_spark.LazyStringArrayList.EMPTY;
       private void ensureClassesIsMutable() {
         if (!((bitField0_ & 0x00000008) == 0x00000008)) {
-          classes_ = new com.google.protobuf.LazyStringArrayList(classes_);
+          classes_ = new com.google.protobuf_spark.LazyStringArrayList(classes_);
           bitField0_ |= 0x00000008;
          }
       }
@@ -4392,12 +4392,12 @@ public final class WireFormats {
         return this;
       }
       public Builder clearClasses() {
-        classes_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+        classes_ = com.google.protobuf_spark.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
         onChanged();
         return this;
       }
-      void addClasses(com.google.protobuf.ByteString value) {
+      void addClasses(com.google.protobuf_spark.ByteString value) {
         ensureClassesIsMutable();
         classes_.add(value);
         onChanged();
@@ -4415,7 +4415,7 @@ public final class WireFormats {
   }
   
   public interface DeployDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required string path = 1;
     boolean hasPath();
@@ -4423,22 +4423,22 @@ public final class WireFormats {
     
     // optional bytes config = 2;
     boolean hasConfig();
-    com.google.protobuf.ByteString getConfig();
+    com.google.protobuf_spark.ByteString getConfig();
     
     // optional bytes routerConfig = 3;
     boolean hasRouterConfig();
-    com.google.protobuf.ByteString getRouterConfig();
+    com.google.protobuf_spark.ByteString getRouterConfig();
     
     // optional bytes scope = 4;
     boolean hasScope();
-    com.google.protobuf.ByteString getScope();
+    com.google.protobuf_spark.ByteString getScope();
     
     // optional string dispatcher = 5;
     boolean hasDispatcher();
     String getDispatcher();
   }
   public static final class DeployData extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements DeployDataOrBuilder {
     // Use DeployData.newBuilder() to construct.
     private DeployData(Builder builder) {
@@ -4455,12 +4455,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_DeployData_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_DeployData_fieldAccessorTable;
     }
@@ -4477,54 +4477,54 @@ public final class WireFormats {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           path_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getPathBytes() {
+    private com.google.protobuf_spark.ByteString getPathBytes() {
       java.lang.Object ref = path_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         path_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
     // optional bytes config = 2;
     public static final int CONFIG_FIELD_NUMBER = 2;
-    private com.google.protobuf.ByteString config_;
+    private com.google.protobuf_spark.ByteString config_;
     public boolean hasConfig() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
-    public com.google.protobuf.ByteString getConfig() {
+    public com.google.protobuf_spark.ByteString getConfig() {
       return config_;
     }
     
     // optional bytes routerConfig = 3;
     public static final int ROUTERCONFIG_FIELD_NUMBER = 3;
-    private com.google.protobuf.ByteString routerConfig_;
+    private com.google.protobuf_spark.ByteString routerConfig_;
     public boolean hasRouterConfig() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
-    public com.google.protobuf.ByteString getRouterConfig() {
+    public com.google.protobuf_spark.ByteString getRouterConfig() {
       return routerConfig_;
     }
     
     // optional bytes scope = 4;
     public static final int SCOPE_FIELD_NUMBER = 4;
-    private com.google.protobuf.ByteString scope_;
+    private com.google.protobuf_spark.ByteString scope_;
     public boolean hasScope() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
-    public com.google.protobuf.ByteString getScope() {
+    public com.google.protobuf_spark.ByteString getScope() {
       return scope_;
     }
     
@@ -4539,32 +4539,32 @@ public final class WireFormats {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           dispatcher_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getDispatcherBytes() {
+    private com.google.protobuf_spark.ByteString getDispatcherBytes() {
       java.lang.Object ref = dispatcher_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         dispatcher_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
     private void initFields() {
       path_ = "";
-      config_ = com.google.protobuf.ByteString.EMPTY;
-      routerConfig_ = com.google.protobuf.ByteString.EMPTY;
-      scope_ = com.google.protobuf.ByteString.EMPTY;
+      config_ = com.google.protobuf_spark.ByteString.EMPTY;
+      routerConfig_ = com.google.protobuf_spark.ByteString.EMPTY;
+      scope_ = com.google.protobuf_spark.ByteString.EMPTY;
       dispatcher_ = "";
     }
     private byte memoizedIsInitialized = -1;
@@ -4580,7 +4580,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -4608,23 +4608,23 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(1, getPathBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(2, config_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(3, routerConfig_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(4, scope_);
       }
       if (((bitField0_ & 0x00000010) == 0x00000010)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(5, getDispatcherBytes());
       }
       size += getUnknownFields().getSerializedSize();
@@ -4640,25 +4640,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.DeployData parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.DeployData parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.DeployData parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.DeployData parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -4668,7 +4668,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.DeployData parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -4684,7 +4684,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.DeployData parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -4694,13 +4694,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.DeployData parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.DeployData parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -4715,19 +4715,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.DeployDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_DeployData_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_DeployData_fieldAccessorTable;
       }
@@ -4737,12 +4737,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -4753,11 +4753,11 @@ public final class WireFormats {
         super.clear();
         path_ = "";
         bitField0_ = (bitField0_ & ~0x00000001);
-        config_ = com.google.protobuf.ByteString.EMPTY;
+        config_ = com.google.protobuf_spark.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000002);
-        routerConfig_ = com.google.protobuf.ByteString.EMPTY;
+        routerConfig_ = com.google.protobuf_spark.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000004);
-        scope_ = com.google.protobuf.ByteString.EMPTY;
+        scope_ = com.google.protobuf_spark.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000008);
         dispatcher_ = "";
         bitField0_ = (bitField0_ & ~0x00000010);
@@ -4768,7 +4768,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.DeployData.getDescriptor();
       }
@@ -4786,7 +4786,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.DeployData buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.DeployData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -4824,7 +4824,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.DeployData) {
           return mergeFrom((akka.remote.WireFormats.DeployData)other);
         } else {
@@ -4863,11 +4863,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -4924,7 +4924,7 @@ public final class WireFormats {
       public String getPath() {
         java.lang.Object ref = path_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           path_ = s;
           return s;
         } else {
@@ -4946,21 +4946,21 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      void setPath(com.google.protobuf.ByteString value) {
+      void setPath(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000001;
         path_ = value;
         onChanged();
       }
       
       // optional bytes config = 2;
-      private com.google.protobuf.ByteString config_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf_spark.ByteString config_ = com.google.protobuf_spark.ByteString.EMPTY;
       public boolean hasConfig() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
-      public com.google.protobuf.ByteString getConfig() {
+      public com.google.protobuf_spark.ByteString getConfig() {
         return config_;
       }
-      public Builder setConfig(com.google.protobuf.ByteString value) {
+      public Builder setConfig(com.google.protobuf_spark.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -4977,14 +4977,14 @@ public final class WireFormats {
       }
       
       // optional bytes routerConfig = 3;
-      private com.google.protobuf.ByteString routerConfig_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf_spark.ByteString routerConfig_ = com.google.protobuf_spark.ByteString.EMPTY;
       public boolean hasRouterConfig() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
-      public com.google.protobuf.ByteString getRouterConfig() {
+      public com.google.protobuf_spark.ByteString getRouterConfig() {
         return routerConfig_;
       }
-      public Builder setRouterConfig(com.google.protobuf.ByteString value) {
+      public Builder setRouterConfig(com.google.protobuf_spark.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5001,14 +5001,14 @@ public final class WireFormats {
       }
       
       // optional bytes scope = 4;
-      private com.google.protobuf.ByteString scope_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf_spark.ByteString scope_ = com.google.protobuf_spark.ByteString.EMPTY;
       public boolean hasScope() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
-      public com.google.protobuf.ByteString getScope() {
+      public com.google.protobuf_spark.ByteString getScope() {
         return scope_;
       }
-      public Builder setScope(com.google.protobuf.ByteString value) {
+      public Builder setScope(com.google.protobuf_spark.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5032,7 +5032,7 @@ public final class WireFormats {
       public String getDispatcher() {
         java.lang.Object ref = dispatcher_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           dispatcher_ = s;
           return s;
         } else {
@@ -5054,7 +5054,7 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      void setDispatcher(com.google.protobuf.ByteString value) {
+      void setDispatcher(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000010;
         dispatcher_ = value;
         onChanged();
@@ -5072,11 +5072,11 @@ public final class WireFormats {
   }
   
   public interface AkkaProtocolMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // optional bytes payload = 1;
     boolean hasPayload();
-    com.google.protobuf.ByteString getPayload();
+    com.google.protobuf_spark.ByteString getPayload();
     
     // optional .AkkaControlMessage instruction = 2;
     boolean hasInstruction();
@@ -5084,7 +5084,7 @@ public final class WireFormats {
     akka.remote.WireFormats.AkkaControlMessageOrBuilder getInstructionOrBuilder();
   }
   public static final class AkkaProtocolMessage extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements AkkaProtocolMessageOrBuilder {
     // Use AkkaProtocolMessage.newBuilder() to construct.
     private AkkaProtocolMessage(Builder builder) {
@@ -5101,12 +5101,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_AkkaProtocolMessage_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_AkkaProtocolMessage_fieldAccessorTable;
     }
@@ -5114,11 +5114,11 @@ public final class WireFormats {
     private int bitField0_;
     // optional bytes payload = 1;
     public static final int PAYLOAD_FIELD_NUMBER = 1;
-    private com.google.protobuf.ByteString payload_;
+    private com.google.protobuf_spark.ByteString payload_;
     public boolean hasPayload() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
-    public com.google.protobuf.ByteString getPayload() {
+    public com.google.protobuf_spark.ByteString getPayload() {
       return payload_;
     }
     
@@ -5136,7 +5136,7 @@ public final class WireFormats {
     }
     
     private void initFields() {
-      payload_ = com.google.protobuf.ByteString.EMPTY;
+      payload_ = com.google.protobuf_spark.ByteString.EMPTY;
       instruction_ = akka.remote.WireFormats.AkkaControlMessage.getDefaultInstance();
     }
     private byte memoizedIsInitialized = -1;
@@ -5154,7 +5154,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5173,11 +5173,11 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(1, payload_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(2, instruction_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -5193,25 +5193,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.AkkaProtocolMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AkkaProtocolMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.AkkaProtocolMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AkkaProtocolMessage parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -5221,7 +5221,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AkkaProtocolMessage parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -5237,7 +5237,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AkkaProtocolMessage parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -5247,13 +5247,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.AkkaProtocolMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.AkkaProtocolMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -5268,19 +5268,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.AkkaProtocolMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_AkkaProtocolMessage_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_AkkaProtocolMessage_fieldAccessorTable;
       }
@@ -5290,12 +5290,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getInstructionFieldBuilder();
         }
       }
@@ -5305,7 +5305,7 @@ public final class WireFormats {
       
       public Builder clear() {
         super.clear();
-        payload_ = com.google.protobuf.ByteString.EMPTY;
+        payload_ = com.google.protobuf_spark.ByteString.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
         if (instructionBuilder_ == null) {
           instruction_ = akka.remote.WireFormats.AkkaControlMessage.getDefaultInstance();
@@ -5320,7 +5320,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.AkkaProtocolMessage.getDescriptor();
       }
@@ -5338,7 +5338,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.AkkaProtocolMessage buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.AkkaProtocolMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -5368,7 +5368,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.AkkaProtocolMessage) {
           return mergeFrom((akka.remote.WireFormats.AkkaProtocolMessage)other);
         } else {
@@ -5400,11 +5400,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -5443,14 +5443,14 @@ public final class WireFormats {
       private int bitField0_;
       
       // optional bytes payload = 1;
-      private com.google.protobuf.ByteString payload_ = com.google.protobuf.ByteString.EMPTY;
+      private com.google.protobuf_spark.ByteString payload_ = com.google.protobuf_spark.ByteString.EMPTY;
       public boolean hasPayload() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
-      public com.google.protobuf.ByteString getPayload() {
+      public com.google.protobuf_spark.ByteString getPayload() {
         return payload_;
       }
-      public Builder setPayload(com.google.protobuf.ByteString value) {
+      public Builder setPayload(com.google.protobuf_spark.ByteString value) {
         if (value == null) {
     throw new NullPointerException();
   }
@@ -5468,7 +5468,7 @@ public final class WireFormats {
       
       // optional .AkkaControlMessage instruction = 2;
       private akka.remote.WireFormats.AkkaControlMessage instruction_ = akka.remote.WireFormats.AkkaControlMessage.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.AkkaControlMessage, akka.remote.WireFormats.AkkaControlMessage.Builder, akka.remote.WireFormats.AkkaControlMessageOrBuilder> instructionBuilder_;
       public boolean hasInstruction() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
@@ -5542,11 +5542,11 @@ public final class WireFormats {
           return instruction_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.AkkaControlMessage, akka.remote.WireFormats.AkkaControlMessage.Builder, akka.remote.WireFormats.AkkaControlMessageOrBuilder> 
           getInstructionFieldBuilder() {
         if (instructionBuilder_ == null) {
-          instructionBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          instructionBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.AkkaControlMessage, akka.remote.WireFormats.AkkaControlMessage.Builder, akka.remote.WireFormats.AkkaControlMessageOrBuilder>(
                   instruction_,
                   getParentForChildren(),
@@ -5568,7 +5568,7 @@ public final class WireFormats {
   }
   
   public interface AkkaControlMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required .CommandType commandType = 1;
     boolean hasCommandType();
@@ -5580,7 +5580,7 @@ public final class WireFormats {
     akka.remote.WireFormats.AkkaHandshakeInfoOrBuilder getHandshakeInfoOrBuilder();
   }
   public static final class AkkaControlMessage extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements AkkaControlMessageOrBuilder {
     // Use AkkaControlMessage.newBuilder() to construct.
     private AkkaControlMessage(Builder builder) {
@@ -5597,12 +5597,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_AkkaControlMessage_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_AkkaControlMessage_fieldAccessorTable;
     }
@@ -5654,7 +5654,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -5673,11 +5673,11 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeEnumSize(1, commandType_.getNumber());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(2, handshakeInfo_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -5693,25 +5693,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.AkkaControlMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AkkaControlMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.AkkaControlMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AkkaControlMessage parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -5721,7 +5721,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AkkaControlMessage parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -5737,7 +5737,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AkkaControlMessage parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -5747,13 +5747,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.AkkaControlMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.AkkaControlMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -5768,19 +5768,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.AkkaControlMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_AkkaControlMessage_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_AkkaControlMessage_fieldAccessorTable;
       }
@@ -5790,12 +5790,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getHandshakeInfoFieldBuilder();
         }
       }
@@ -5820,7 +5820,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.AkkaControlMessage.getDescriptor();
       }
@@ -5838,7 +5838,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.AkkaControlMessage buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.AkkaControlMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -5868,7 +5868,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.AkkaControlMessage) {
           return mergeFrom((akka.remote.WireFormats.AkkaControlMessage)other);
         } else {
@@ -5904,11 +5904,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -5978,7 +5978,7 @@ public final class WireFormats {
       
       // optional .AkkaHandshakeInfo handshakeInfo = 2;
       private akka.remote.WireFormats.AkkaHandshakeInfo handshakeInfo_ = akka.remote.WireFormats.AkkaHandshakeInfo.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.AkkaHandshakeInfo, akka.remote.WireFormats.AkkaHandshakeInfo.Builder, akka.remote.WireFormats.AkkaHandshakeInfoOrBuilder> handshakeInfoBuilder_;
       public boolean hasHandshakeInfo() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
@@ -6052,11 +6052,11 @@ public final class WireFormats {
           return handshakeInfo_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.AkkaHandshakeInfo, akka.remote.WireFormats.AkkaHandshakeInfo.Builder, akka.remote.WireFormats.AkkaHandshakeInfoOrBuilder> 
           getHandshakeInfoFieldBuilder() {
         if (handshakeInfoBuilder_ == null) {
-          handshakeInfoBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          handshakeInfoBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.AkkaHandshakeInfo, akka.remote.WireFormats.AkkaHandshakeInfo.Builder, akka.remote.WireFormats.AkkaHandshakeInfoOrBuilder>(
                   handshakeInfo_,
                   getParentForChildren(),
@@ -6078,7 +6078,7 @@ public final class WireFormats {
   }
   
   public interface AkkaHandshakeInfoOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required .AddressData origin = 1;
     boolean hasOrigin();
@@ -6094,7 +6094,7 @@ public final class WireFormats {
     String getCookie();
   }
   public static final class AkkaHandshakeInfo extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements AkkaHandshakeInfoOrBuilder {
     // Use AkkaHandshakeInfo.newBuilder() to construct.
     private AkkaHandshakeInfo(Builder builder) {
@@ -6111,12 +6111,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_AkkaHandshakeInfo_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_AkkaHandshakeInfo_fieldAccessorTable;
     }
@@ -6156,24 +6156,24 @@ public final class WireFormats {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           cookie_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getCookieBytes() {
+    private com.google.protobuf_spark.ByteString getCookieBytes() {
       java.lang.Object ref = cookie_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         cookie_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -6203,7 +6203,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -6225,15 +6225,15 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeMessageSize(1, origin_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeFixed64Size(2, uid_);
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(3, getCookieBytes());
       }
       size += getUnknownFields().getSerializedSize();
@@ -6249,25 +6249,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.AkkaHandshakeInfo parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AkkaHandshakeInfo parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.AkkaHandshakeInfo parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AkkaHandshakeInfo parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -6277,7 +6277,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AkkaHandshakeInfo parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -6293,7 +6293,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AkkaHandshakeInfo parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -6303,13 +6303,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.AkkaHandshakeInfo parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.AkkaHandshakeInfo parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -6324,19 +6324,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.AkkaHandshakeInfoOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_AkkaHandshakeInfo_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_AkkaHandshakeInfo_fieldAccessorTable;
       }
@@ -6346,12 +6346,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
           getOriginFieldBuilder();
         }
       }
@@ -6378,7 +6378,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.AkkaHandshakeInfo.getDescriptor();
       }
@@ -6396,7 +6396,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.AkkaHandshakeInfo buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.AkkaHandshakeInfo result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -6430,7 +6430,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.AkkaHandshakeInfo) {
           return mergeFrom((akka.remote.WireFormats.AkkaHandshakeInfo)other);
         } else {
@@ -6471,11 +6471,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -6520,7 +6520,7 @@ public final class WireFormats {
       
       // required .AddressData origin = 1;
       private akka.remote.WireFormats.AddressData origin_ = akka.remote.WireFormats.AddressData.getDefaultInstance();
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.AddressData, akka.remote.WireFormats.AddressData.Builder, akka.remote.WireFormats.AddressDataOrBuilder> originBuilder_;
       public boolean hasOrigin() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
@@ -6594,11 +6594,11 @@ public final class WireFormats {
           return origin_;
         }
       }
-      private com.google.protobuf.SingleFieldBuilder<
+      private com.google.protobuf_spark.SingleFieldBuilder<
           akka.remote.WireFormats.AddressData, akka.remote.WireFormats.AddressData.Builder, akka.remote.WireFormats.AddressDataOrBuilder> 
           getOriginFieldBuilder() {
         if (originBuilder_ == null) {
-          originBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+          originBuilder_ = new com.google.protobuf_spark.SingleFieldBuilder<
               akka.remote.WireFormats.AddressData, akka.remote.WireFormats.AddressData.Builder, akka.remote.WireFormats.AddressDataOrBuilder>(
                   origin_,
                   getParentForChildren(),
@@ -6637,7 +6637,7 @@ public final class WireFormats {
       public String getCookie() {
         java.lang.Object ref = cookie_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           cookie_ = s;
           return s;
         } else {
@@ -6659,7 +6659,7 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      void setCookie(com.google.protobuf.ByteString value) {
+      void setCookie(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000004;
         cookie_ = value;
         onChanged();
@@ -6677,7 +6677,7 @@ public final class WireFormats {
   }
   
   public interface AddressDataOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
     
     // required string system = 1;
     boolean hasSystem();
@@ -6696,7 +6696,7 @@ public final class WireFormats {
     String getProtocol();
   }
   public static final class AddressData extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements AddressDataOrBuilder {
     // Use AddressData.newBuilder() to construct.
     private AddressData(Builder builder) {
@@ -6713,12 +6713,12 @@ public final class WireFormats {
       return defaultInstance;
     }
     
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return akka.remote.WireFormats.internal_static_AddressData_descriptor;
     }
     
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return akka.remote.WireFormats.internal_static_AddressData_fieldAccessorTable;
     }
@@ -6735,24 +6735,24 @@ public final class WireFormats {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           system_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getSystemBytes() {
+    private com.google.protobuf_spark.ByteString getSystemBytes() {
       java.lang.Object ref = system_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         system_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -6767,24 +6767,24 @@ public final class WireFormats {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           hostname_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getHostnameBytes() {
+    private com.google.protobuf_spark.ByteString getHostnameBytes() {
       java.lang.Object ref = hostname_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         hostname_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -6809,24 +6809,24 @@ public final class WireFormats {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs = 
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           protocol_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getProtocolBytes() {
+    private com.google.protobuf_spark.ByteString getProtocolBytes() {
       java.lang.Object ref = protocol_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b = 
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         protocol_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
     
@@ -6857,7 +6857,7 @@ public final class WireFormats {
       return true;
     }
     
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -6882,19 +6882,19 @@ public final class WireFormats {
     
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(1, getSystemBytes());
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(2, getHostnameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeUInt32Size(3, port_);
       }
       if (((bitField0_ & 0x00000008) == 0x00000008)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(4, getProtocolBytes());
       }
       size += getUnknownFields().getSerializedSize();
@@ -6910,25 +6910,25 @@ public final class WireFormats {
     }
     
     public static akka.remote.WireFormats.AddressData parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AddressData parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static akka.remote.WireFormats.AddressData parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static akka.remote.WireFormats.AddressData parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -6938,7 +6938,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AddressData parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -6954,7 +6954,7 @@ public final class WireFormats {
     }
     public static akka.remote.WireFormats.AddressData parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -6964,13 +6964,13 @@ public final class WireFormats {
       }
     }
     public static akka.remote.WireFormats.AddressData parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static akka.remote.WireFormats.AddressData parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -6985,19 +6985,19 @@ public final class WireFormats {
     
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements akka.remote.WireFormats.AddressDataOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return akka.remote.WireFormats.internal_static_AddressData_descriptor;
       }
       
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return akka.remote.WireFormats.internal_static_AddressData_fieldAccessorTable;
       }
@@ -7007,12 +7007,12 @@ public final class WireFormats {
         maybeForceBuilderInitialization();
       }
       
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -7036,7 +7036,7 @@ public final class WireFormats {
         return create().mergeFrom(buildPartial());
       }
       
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return akka.remote.WireFormats.AddressData.getDescriptor();
       }
@@ -7054,7 +7054,7 @@ public final class WireFormats {
       }
       
       private akka.remote.WireFormats.AddressData buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         akka.remote.WireFormats.AddressData result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(
@@ -7088,7 +7088,7 @@ public final class WireFormats {
         return result;
       }
       
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof akka.remote.WireFormats.AddressData) {
           return mergeFrom((akka.remote.WireFormats.AddressData)other);
         } else {
@@ -7132,11 +7132,11 @@ public final class WireFormats {
       }
       
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -7188,7 +7188,7 @@ public final class WireFormats {
       public String getSystem() {
         java.lang.Object ref = system_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           system_ = s;
           return s;
         } else {
@@ -7210,7 +7210,7 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      void setSystem(com.google.protobuf.ByteString value) {
+      void setSystem(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000001;
         system_ = value;
         onChanged();
@@ -7224,7 +7224,7 @@ public final class WireFormats {
       public String getHostname() {
         java.lang.Object ref = hostname_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           hostname_ = s;
           return s;
         } else {
@@ -7246,7 +7246,7 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      void setHostname(com.google.protobuf.ByteString value) {
+      void setHostname(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000002;
         hostname_ = value;
         onChanged();
@@ -7281,7 +7281,7 @@ public final class WireFormats {
       public String getProtocol() {
         java.lang.Object ref = protocol_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           protocol_ = s;
           return s;
         } else {
@@ -7303,7 +7303,7 @@ public final class WireFormats {
         onChanged();
         return this;
       }
-      void setProtocol(com.google.protobuf.ByteString value) {
+      void setProtocol(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000008;
         protocol_ = value;
         onChanged();
@@ -7320,72 +7320,72 @@ public final class WireFormats {
     // @@protoc_insertion_point(class_scope:AddressData)
   }
   
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_AckAndEnvelopeContainer_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_AckAndEnvelopeContainer_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_RemoteEnvelope_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_RemoteEnvelope_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_AcknowledgementInfo_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_AcknowledgementInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_ActorRefData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_ActorRefData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_SerializedMessage_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_SerializedMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_DaemonMsgCreateData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_DaemonMsgCreateData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_PropsData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_PropsData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_DeployData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_DeployData_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_AkkaProtocolMessage_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_AkkaProtocolMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_AkkaControlMessage_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_AkkaControlMessage_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_AkkaHandshakeInfo_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_AkkaHandshakeInfo_fieldAccessorTable;
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_AddressData_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_AddressData_fieldAccessorTable;
   
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static com.google.protobuf_spark.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static com.google.protobuf_spark.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -7421,15 +7421,15 @@ public final class WireFormats {
       "CIATE_SHUTTING_DOWN\020\004\022\034\n\030DISASSOCIATE_QU",
       "ARANTINED\020\005B\017\n\013akka.remoteH\001"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
+    com.google.protobuf_spark.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+      new com.google.protobuf_spark.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+        public com.google.protobuf_spark.ExtensionRegistry assignDescriptors(
+            com.google.protobuf_spark.Descriptors.FileDescriptor root) {
           descriptor = root;
           internal_static_AckAndEnvelopeContainer_descriptor =
             getDescriptor().getMessageTypes().get(0);
           internal_static_AckAndEnvelopeContainer_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_AckAndEnvelopeContainer_descriptor,
               new java.lang.String[] { "Ack", "Envelope", },
               akka.remote.WireFormats.AckAndEnvelopeContainer.class,
@@ -7437,7 +7437,7 @@ public final class WireFormats {
           internal_static_RemoteEnvelope_descriptor =
             getDescriptor().getMessageTypes().get(1);
           internal_static_RemoteEnvelope_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_RemoteEnvelope_descriptor,
               new java.lang.String[] { "Recipient", "Message", "Sender", "Seq", },
               akka.remote.WireFormats.RemoteEnvelope.class,
@@ -7445,7 +7445,7 @@ public final class WireFormats {
           internal_static_AcknowledgementInfo_descriptor =
             getDescriptor().getMessageTypes().get(2);
           internal_static_AcknowledgementInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_AcknowledgementInfo_descriptor,
               new java.lang.String[] { "CumulativeAck", "Nacks", },
               akka.remote.WireFormats.AcknowledgementInfo.class,
@@ -7453,7 +7453,7 @@ public final class WireFormats {
           internal_static_ActorRefData_descriptor =
             getDescriptor().getMessageTypes().get(3);
           internal_static_ActorRefData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_ActorRefData_descriptor,
               new java.lang.String[] { "Path", },
               akka.remote.WireFormats.ActorRefData.class,
@@ -7461,7 +7461,7 @@ public final class WireFormats {
           internal_static_SerializedMessage_descriptor =
             getDescriptor().getMessageTypes().get(4);
           internal_static_SerializedMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_SerializedMessage_descriptor,
               new java.lang.String[] { "Message", "SerializerId", "MessageManifest", },
               akka.remote.WireFormats.SerializedMessage.class,
@@ -7469,7 +7469,7 @@ public final class WireFormats {
           internal_static_DaemonMsgCreateData_descriptor =
             getDescriptor().getMessageTypes().get(5);
           internal_static_DaemonMsgCreateData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_DaemonMsgCreateData_descriptor,
               new java.lang.String[] { "Props", "Deploy", "Path", "Supervisor", },
               akka.remote.WireFormats.DaemonMsgCreateData.class,
@@ -7477,7 +7477,7 @@ public final class WireFormats {
           internal_static_PropsData_descriptor =
             getDescriptor().getMessageTypes().get(6);
           internal_static_PropsData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_PropsData_descriptor,
               new java.lang.String[] { "Deploy", "Clazz", "Args", "Classes", },
               akka.remote.WireFormats.PropsData.class,
@@ -7485,7 +7485,7 @@ public final class WireFormats {
           internal_static_DeployData_descriptor =
             getDescriptor().getMessageTypes().get(7);
           internal_static_DeployData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_DeployData_descriptor,
               new java.lang.String[] { "Path", "Config", "RouterConfig", "Scope", "Dispatcher", },
               akka.remote.WireFormats.DeployData.class,
@@ -7493,7 +7493,7 @@ public final class WireFormats {
           internal_static_AkkaProtocolMessage_descriptor =
             getDescriptor().getMessageTypes().get(8);
           internal_static_AkkaProtocolMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_AkkaProtocolMessage_descriptor,
               new java.lang.String[] { "Payload", "Instruction", },
               akka.remote.WireFormats.AkkaProtocolMessage.class,
@@ -7501,7 +7501,7 @@ public final class WireFormats {
           internal_static_AkkaControlMessage_descriptor =
             getDescriptor().getMessageTypes().get(9);
           internal_static_AkkaControlMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_AkkaControlMessage_descriptor,
               new java.lang.String[] { "CommandType", "HandshakeInfo", },
               akka.remote.WireFormats.AkkaControlMessage.class,
@@ -7509,7 +7509,7 @@ public final class WireFormats {
           internal_static_AkkaHandshakeInfo_descriptor =
             getDescriptor().getMessageTypes().get(10);
           internal_static_AkkaHandshakeInfo_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_AkkaHandshakeInfo_descriptor,
               new java.lang.String[] { "Origin", "Uid", "Cookie", },
               akka.remote.WireFormats.AkkaHandshakeInfo.class,
@@ -7517,7 +7517,7 @@ public final class WireFormats {
           internal_static_AddressData_descriptor =
             getDescriptor().getMessageTypes().get(11);
           internal_static_AddressData_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_AddressData_descriptor,
               new java.lang.String[] { "System", "Hostname", "Port", "Protocol", },
               akka.remote.WireFormats.AddressData.class,
@@ -7525,9 +7525,9 @@ public final class WireFormats {
           return null;
         }
       };
-    com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf_spark.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new com.google.protobuf_spark.Descriptors.FileDescriptor[] {
         }, assigner);
   }
   

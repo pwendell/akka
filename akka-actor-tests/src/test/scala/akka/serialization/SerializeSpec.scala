@@ -14,7 +14,7 @@ import scala.concurrent.Await
 import akka.util.Timeout
 import scala.concurrent.duration._
 import scala.reflect.BeanInfo
-import com.google.protobuf.Message
+import com.google.protobuf_spark.Message
 import com.typesafe.config._
 import akka.pattern.ask
 import org.apache.commons.codec.binary.Hex.{ encodeHex, decodeHex }

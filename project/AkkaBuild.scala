@@ -42,8 +42,8 @@ object AkkaBuild extends Build {
   val requestedScalaVersion = System.getProperty("akka.scalaVersion", "2.10.2")
 
   lazy val buildSettings = Seq(
-    organization := "com.typesafe.akka",
-    version      := "2.2.3",
+    organization := "org.spark-project.akka",
+    version      := "2.2.3-shaded-protobuf",
     // Also change ScalaVersion in akka-sbt-plugin/sample/project/Build.scala
     scalaVersion := requestedScalaVersion,
     scalaBinaryVersion <<= (scalaVersion, scalaBinaryVersion)((v, bv) => System.getProperty("akka.scalaBinaryVersion", if (v contains "-") v else bv))
@@ -847,7 +847,8 @@ object AkkaBuild extends Build {
     Seq(scalacOptions in (Compile, doc) ++= scaladocOptions) ++
       (if (scaladocDiagramsEnabled)
         Seq(doc in Compile ~= scaladocVerifier)
-       else Seq.empty)
+       else Seq.empty) ++
+      (resolvers += "Protobuf Staging" at "http://oss.sonatype.org/content/repositories/orgspark-project-1036")
   }
 
   lazy val unidocScaladocSettings: Seq[sbt.Setting[_]]= {
@@ -1100,7 +1101,7 @@ object AkkaBuild extends Build {
       "akka.camel",
       "akka.camel.internal.component",
       "akka.zeromq",
-      "com.google.protobuf",
+      "org.spark-project.protobuf",
       "net.sandrogrzicic.scalabuff")
 
     def exports(packages: Seq[String] = Seq(), imports: Seq[String] = Nil) = osgiSettings ++ Seq(
@@ -1110,7 +1111,7 @@ object AkkaBuild extends Build {
     def defaultImports = Seq("!sun.misc", akkaImport(), configImport(), scalaImport(), "*")
     def akkaImport(packageName: String = "akka.*") = "%s;version=\"[2.2,2.3)\"".format(packageName)
     def configImport(packageName: String = "com.typesafe.config.*") = "%s;version=\"[0.4.1,1.1.0)\"".format(packageName)
-    def protobufImport(packageName: String = "com.google.protobuf.*") = "%s;version=\"[2.4.0,2.5.0)\"".format(packageName)
+    def protobufImport(packageName: String = "com.google.protobuf_spark.*") = "%s;version=\"[2.4.0,2.5.0)\"".format(packageName)
     def scalabuffImport(packageName: String = "net.sandrogrzicic.scalabuff.*") = "%s;version=\"[1.2.0,1.3.0)\"".format(packageName)
     def scalaImport(packageName: String = "scala.*") = "%s;version=\"[2.10,2.11)\"".format(packageName)
     def optionalResolution(packageName: String) = "%s;resolution:=optional".format(packageName)
@@ -1127,7 +1128,7 @@ object Dependencies {
 
     val config        = "com.typesafe"                % "config"                       % "1.0.2"       // ApacheV2
     val netty         = "io.netty"                    % "netty"                        % "3.6.6.Final" // ApacheV2
-    val protobuf      = "com.google.protobuf"         % "protobuf-java"                % "2.4.1"       // New BSD
+    val protobuf      = "org.spark-project.protobuf"  % "protobuf-java"                % "2.4.1-shaded"       // New BSD
     val scalaStm      = "org.scala-stm"              %% "scala-stm"                    % "0.7"         // Modified BSD (Scala)
     val scalaBuffRuntime = "net.sandrogrzicic"       %% "scalabuff-runtime"            % "1.2.0"       // ApacheV2
 

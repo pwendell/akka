@@ -114,7 +114,7 @@ package docs.serialization {
           serialization-bindings {
             "java.lang.String" = java
             "docs.serialization.Customer" = java
-            "com.google.protobuf.Message" = proto
+            "com.google.protobuf_spark.Message" = proto
             "docs.serialization.MyOwnSerializable" = myown
             "java.lang.Boolean" = myown
           }

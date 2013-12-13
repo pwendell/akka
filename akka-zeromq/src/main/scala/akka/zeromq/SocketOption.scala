@@ -3,7 +3,7 @@
  */
 package akka.zeromq
 
-import com.google.protobuf.Message
+import com.google.protobuf_spark.Message
 import akka.actor.ActorRef
 import scala.concurrent.duration._
 import scala.collection.immutable

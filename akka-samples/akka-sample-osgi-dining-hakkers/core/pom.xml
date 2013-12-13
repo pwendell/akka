@@ -53,7 +53,7 @@
             <artifactId>netty</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.google.protobuf</groupId>
+            <groupId>com.google.protobuf_spark</groupId>
             <artifactId>protobuf-java</artifactId>
         </dependency>
         <dependency>

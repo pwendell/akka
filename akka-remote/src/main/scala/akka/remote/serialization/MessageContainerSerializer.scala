@@ -9,7 +9,7 @@ import scala.annotation.tailrec
 import akka.remote.ContainerFormats
 import akka.remote.ContainerFormats.SelectionEnvelope
 import akka.remote.WireFormats.SerializedMessage
-import com.google.protobuf.ByteString
+import com.google.protobuf_spark.ByteString
 import akka.actor.SelectChildPattern
 import akka.actor.SelectParent
 import akka.actor.SelectChildName

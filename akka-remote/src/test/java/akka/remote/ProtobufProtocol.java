@@ -3,15 +3,15 @@
 
 package akka.remote;
 
-import com.google.protobuf.AbstractMessage;
+import com.google.protobuf_spark.AbstractMessage;
 
 public final class ProtobufProtocol {
   private ProtobufProtocol() {}
   public static void registerAllExtensions(
-      com.google.protobuf.ExtensionRegistry registry) {
+      com.google.protobuf_spark.ExtensionRegistry registry) {
   }
   public interface MyMessageOrBuilder
-      extends com.google.protobuf.MessageOrBuilder {
+      extends com.google.protobuf_spark.MessageOrBuilder {
 
     // required uint64 id = 1;
     boolean hasId();
@@ -26,7 +26,7 @@ public final class ProtobufProtocol {
     boolean getStatus();
   }
   public static final class MyMessage extends
-      com.google.protobuf.GeneratedMessage
+      com.google.protobuf_spark.GeneratedMessage
       implements MyMessageOrBuilder {
     // Use MyMessage.newBuilder() to construct.
     private MyMessage(Builder builder) {
@@ -43,12 +43,12 @@ public final class ProtobufProtocol {
       return defaultInstance;
     }
 
-    public static final com.google.protobuf.Descriptors.Descriptor
+    public static final com.google.protobuf_spark.Descriptors.Descriptor
         getDescriptor() {
       return ProtobufProtocol.internal_static_akka_actor_MyMessage_descriptor;
     }
 
-    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
       return ProtobufProtocol.internal_static_akka_actor_MyMessage_fieldAccessorTable;
     }
@@ -75,24 +75,24 @@ public final class ProtobufProtocol {
       if (ref instanceof String) {
         return (String) ref;
       } else {
-        com.google.protobuf.ByteString bs =
-            (com.google.protobuf.ByteString) ref;
+        com.google.protobuf_spark.ByteString bs =
+            (com.google.protobuf_spark.ByteString) ref;
         String s = bs.toStringUtf8();
-        if (com.google.protobuf.Internal.isValidUtf8(bs)) {
+        if (com.google.protobuf_spark.Internal.isValidUtf8(bs)) {
           name_ = s;
         }
         return s;
       }
     }
-    private com.google.protobuf.ByteString getNameBytes() {
+    private com.google.protobuf_spark.ByteString getNameBytes() {
       java.lang.Object ref = name_;
       if (ref instanceof String) {
-        com.google.protobuf.ByteString b =
-            com.google.protobuf.ByteString.copyFromUtf8((String) ref);
+        com.google.protobuf_spark.ByteString b =
+            com.google.protobuf_spark.ByteString.copyFromUtf8((String) ref);
         name_ = b;
         return b;
       } else {
-        return (com.google.protobuf.ByteString) ref;
+        return (com.google.protobuf_spark.ByteString) ref;
       }
     }
 
@@ -132,7 +132,7 @@ public final class ProtobufProtocol {
       return true;
     }
 
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
+    public void writeTo(com.google.protobuf_spark.CodedOutputStream output)
                         throws java.io.IOException {
       getSerializedSize();
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
@@ -154,15 +154,15 @@ public final class ProtobufProtocol {
 
       size = 0;
       if (((bitField0_ & 0x00000001) == 0x00000001)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeUInt64Size(1, id_);
       }
       if (((bitField0_ & 0x00000002) == 0x00000002)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBytesSize(2, getNameBytes());
       }
       if (((bitField0_ & 0x00000004) == 0x00000004)) {
-        size += com.google.protobuf.CodedOutputStream
+        size += com.google.protobuf_spark.CodedOutputStream
           .computeBoolSize(3, status_);
       }
       size += getUnknownFields().getSerializedSize();
@@ -178,25 +178,25 @@ public final class ProtobufProtocol {
     }
 
     public static ProtobufProtocol.MyMessage parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static ProtobufProtocol.MyMessage parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ByteString data,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
     public static ProtobufProtocol.MyMessage parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data).buildParsed();
     }
     public static ProtobufProtocol.MyMessage parseFrom(
         byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf_spark.InvalidProtocolBufferException {
       return newBuilder().mergeFrom(data, extensionRegistry)
                .buildParsed();
     }
@@ -206,7 +206,7 @@ public final class ProtobufProtocol {
     }
     public static ProtobufProtocol.MyMessage parseFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -222,7 +222,7 @@ public final class ProtobufProtocol {
     }
     public static ProtobufProtocol.MyMessage parseDelimitedFrom(
         java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       Builder builder = newBuilder();
       if (builder.mergeDelimitedFrom(input, extensionRegistry)) {
@@ -232,13 +232,13 @@ public final class ProtobufProtocol {
       }
     }
     public static ProtobufProtocol.MyMessage parseFrom(
-        com.google.protobuf.CodedInputStream input)
+        com.google.protobuf_spark.CodedInputStream input)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input).buildParsed();
     }
     public static ProtobufProtocol.MyMessage parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        com.google.protobuf_spark.CodedInputStream input,
+        com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return newBuilder().mergeFrom(input, extensionRegistry)
                .buildParsed();
@@ -253,19 +253,19 @@ public final class ProtobufProtocol {
 
     @java.lang.Override
     protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
       Builder builder = new Builder(parent);
       return builder;
     }
     public static final class Builder extends
-        com.google.protobuf.GeneratedMessage.Builder<Builder>
+        com.google.protobuf_spark.GeneratedMessage.Builder<Builder>
        implements ProtobufProtocol.MyMessageOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
+      public static final com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptor() {
         return ProtobufProtocol.internal_static_akka_actor_MyMessage_descriptor;
       }
 
-      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      protected com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
         return ProtobufProtocol.internal_static_akka_actor_MyMessage_fieldAccessorTable;
       }
@@ -275,12 +275,12 @@ public final class ProtobufProtocol {
         maybeForceBuilderInitialization();
       }
 
-      private Builder(com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      private Builder(com.google.protobuf_spark.GeneratedMessage.BuilderParent parent) {
         super(parent);
         maybeForceBuilderInitialization();
       }
       private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders) {
+        if (com.google.protobuf_spark.GeneratedMessage.alwaysUseFieldBuilders) {
         }
       }
       private static Builder create() {
@@ -302,7 +302,7 @@ public final class ProtobufProtocol {
         return create().mergeFrom(buildPartial());
       }
 
-      public com.google.protobuf.Descriptors.Descriptor
+      public com.google.protobuf_spark.Descriptors.Descriptor
           getDescriptorForType() {
         return ProtobufProtocol.MyMessage.getDescriptor();
       }
@@ -320,7 +320,7 @@ public final class ProtobufProtocol {
       }
 
       private ProtobufProtocol.MyMessage buildParsed()
-          throws com.google.protobuf.InvalidProtocolBufferException {
+          throws com.google.protobuf_spark.InvalidProtocolBufferException {
         ProtobufProtocol.MyMessage result = buildPartial();
         if (!result.isInitialized()) {
           throw AbstractMessage.Builder.newUninitializedMessageException(
@@ -350,7 +350,7 @@ public final class ProtobufProtocol {
         return result;
       }
 
-      public Builder mergeFrom(com.google.protobuf.Message other) {
+      public Builder mergeFrom(com.google.protobuf_spark.Message other) {
         if (other instanceof ProtobufProtocol.MyMessage) {
           return mergeFrom((ProtobufProtocol.MyMessage)other);
         } else {
@@ -391,11 +391,11 @@ public final class ProtobufProtocol {
       }
 
       public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          com.google.protobuf_spark.CodedInputStream input,
+          com.google.protobuf_spark.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder(
+        com.google.protobuf_spark.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf_spark.UnknownFieldSet.newBuilder(
             this.getUnknownFields());
         while (true) {
           int tag = input.readTag();
@@ -463,7 +463,7 @@ public final class ProtobufProtocol {
       public String getName() {
         java.lang.Object ref = name_;
         if (!(ref instanceof String)) {
-          String s = ((com.google.protobuf.ByteString) ref).toStringUtf8();
+          String s = ((com.google.protobuf_spark.ByteString) ref).toStringUtf8();
           name_ = s;
           return s;
         } else {
@@ -485,7 +485,7 @@ public final class ProtobufProtocol {
         onChanged();
         return this;
       }
-      void setName(com.google.protobuf.ByteString value) {
+      void setName(com.google.protobuf_spark.ByteString value) {
         bitField0_ |= 0x00000002;
         name_ = value;
         onChanged();
@@ -523,17 +523,17 @@ public final class ProtobufProtocol {
     // @@protoc_insertion_point(class_scope:akka.actor.MyMessage)
   }
 
-  private static com.google.protobuf.Descriptors.Descriptor
+  private static com.google.protobuf_spark.Descriptors.Descriptor
     internal_static_akka_actor_MyMessage_descriptor;
   private static
-    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+    com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable
       internal_static_akka_actor_MyMessage_fieldAccessorTable;
 
-  public static com.google.protobuf.Descriptors.FileDescriptor
+  public static com.google.protobuf_spark.Descriptors.FileDescriptor
       getDescriptor() {
     return descriptor;
   }
-  private static com.google.protobuf.Descriptors.FileDescriptor
+  private static com.google.protobuf_spark.Descriptors.FileDescriptor
       descriptor;
   static {
     java.lang.String[] descriptorData = {
@@ -541,15 +541,15 @@ public final class ProtobufProtocol {
       "MyMessage\022\n\n\002id\030\001 \002(\004\022\014\n\004name\030\002 \002(\t\022\016\n\006s" +
       "tatus\030\003 \002(\010"
     };
-    com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
-      new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
-        public com.google.protobuf.ExtensionRegistry assignDescriptors(
-            com.google.protobuf.Descriptors.FileDescriptor root) {
+    com.google.protobuf_spark.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
+      new com.google.protobuf_spark.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
+        public com.google.protobuf_spark.ExtensionRegistry assignDescriptors(
+            com.google.protobuf_spark.Descriptors.FileDescriptor root) {
           descriptor = root;
           internal_static_akka_actor_MyMessage_descriptor =
             getDescriptor().getMessageTypes().get(0);
           internal_static_akka_actor_MyMessage_fieldAccessorTable = new
-            com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+            com.google.protobuf_spark.GeneratedMessage.FieldAccessorTable(
               internal_static_akka_actor_MyMessage_descriptor,
               new java.lang.String[] { "Id", "Name", "Status", },
               ProtobufProtocol.MyMessage.class,
@@ -557,9 +557,9 @@ public final class ProtobufProtocol {
           return null;
         }
       };
-    com.google.protobuf.Descriptors.FileDescriptor
+    com.google.protobuf_spark.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
-        new com.google.protobuf.Descriptors.FileDescriptor[] {
+        new com.google.protobuf_spark.Descriptors.FileDescriptor[] {
         }, assigner);
   }
 
